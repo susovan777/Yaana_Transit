@@ -1,3 +1,5 @@
+// Path: data\cars.ts
+
 export type Car = {
   id: number;
   name: string;
@@ -8,21 +10,21 @@ export type Car = {
   transmission: string;
   pricePerDay: number;
   badge?: string;
-  image: string;
+  image: string; // Cloudinary or Unsplash URL
   description: string;
 };
 
 export const cars: Car[] = [
   {
     id: 1,
-    name: 'Maruti Shift',
+    name: 'Maruti Swift',
     type: 'Hatchback',
     category: 'hatchback',
     seats: 5,
-    fuel: 'petrol',
+    fuel: 'Petrol',
     transmission: 'Manual',
     pricePerDay: 1200,
-    badge: 'Best value',
+    badge: 'Best Value',
     image:
       'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=600&q=80',
     description:
@@ -30,15 +32,12 @@ export const cars: Car[] = [
   },
   {
     id: 2,
-
     name: 'Honda City',
     type: 'Sedan',
     category: 'sedan',
     seats: 5,
-
     fuel: 'Petrol',
     transmission: 'Automatic',
-
     pricePerDay: 1800,
     badge: 'Popular',
     image:
@@ -52,7 +51,6 @@ export const cars: Car[] = [
     type: 'Premium MPV',
     category: 'suv',
     seats: 7,
-
     fuel: 'Diesel',
     transmission: 'Manual',
     pricePerDay: 2800,
@@ -82,7 +80,6 @@ export const cars: Car[] = [
     type: 'Luxury Sedan',
     category: 'luxury',
     seats: 4,
-
     fuel: 'Petrol',
     transmission: 'Automatic',
     pricePerDay: 6500,
@@ -108,14 +105,12 @@ export const cars: Car[] = [
   },
   {
     id: 7,
-
     name: 'Tata Nexon',
     type: 'Compact SUV',
     category: 'suv',
     seats: 5,
     fuel: 'Petrol',
     transmission: 'Manual',
-
     pricePerDay: 1600,
     image:
       'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80',
@@ -128,7 +123,6 @@ export const cars: Car[] = [
     type: 'Luxury Sedan',
     category: 'luxury',
     seats: 4,
-
     fuel: 'Petrol',
     transmission: 'Automatic',
     pricePerDay: 8000,

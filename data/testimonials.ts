@@ -1,6 +1,6 @@
 // Path: data\testimonials.ts
 
-export type Testimonials = {
+export type Testimonial = {
   id: number;
   text: string;
   author: string;
@@ -10,7 +10,7 @@ export type Testimonials = {
   service: string;
 };
 
-export const testimonials: Testimonials[] = [
+export const testimonials: Testimonial[] = [
   {
     id: 1,
     text: 'Booked an Innova Crysta for our family trip from Mumbai to Goa. The driver was professional, the car spotless. WhatsApp booking took under 2 minutes.',

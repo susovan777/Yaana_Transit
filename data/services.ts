@@ -24,7 +24,6 @@ export const services: Service[] = [
     priceFrom: '₹1,800/day',
     tags: ['Business', 'Events', 'Leisure', 'Corporate'],
   },
-
   {
     id: 2,
     icon: '🔑',
@@ -39,7 +38,7 @@ export const services: Service[] = [
   },
   {
     id: 3,
-    icon: 'X',
+    icon: '✈️',
     name: 'Airport Transfers',
     slug: 'airport-transfers',
     description:
@@ -63,7 +62,7 @@ export const services: Service[] = [
   },
   {
     id: 5,
-    icon: '@',
+    icon: '🏢',
     name: 'Corporate Rentals',
     slug: 'corporate-rentals',
     description:
