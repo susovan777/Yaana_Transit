@@ -3,50 +3,32 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Car, Menu, Phone, X } from 'lucide-react';
-
 import {
   buildWhatsAppUrl,
   NAV_LINKS,
   SITE,
   WA_MESSAGES,
 } from '@/lib/constants';
+import Image from 'next/image';
 
-// ─────────────────────────────────────────
-// LOGO
-// ─────────────────────────────────────────
 function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2.5 shrink-0">
-      {/* Icon box */}
-      <span className="flex items-center justify-center w-9 h-9 rounded-[10px] bg-navy">
-        <Car className="w-5 h-5 text-white" strokeWidth={1.8} />
-      </span>
-      {/* Wordmark */}
-      <span
-        className="font-display text-[20px] font-bold tracking-[0.3px] text-navy"
-        style={{ fontFamily: 'var(--font-display)' }}
-      >
-        Yana <span className="text-sky-brand">Transit</span>
-      </span>
+      <Image src='/logo.png' width={200} height={200} alt='Yana Transit Logo'/>
     </Link>
   );
 }
 
-// ─────────────────────────────────────────
-// NAVBAR
-// ─────────────────────────────────────────
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Add shadow on scroll
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Close mobile menu on resize to desktop
   useEffect(() => {
     const onResize = () => {
       if (window.innerWidth >= 1024) setMenuOpen(false);
@@ -55,7 +37,6 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     return () => {
@@ -77,10 +58,8 @@ export default function Navbar() {
           scrolled ? 'shadow-[0_4px_24px_rgba(11,31,58,0.08)]' : '',
         ].join(' ')}
       >
-        {/* ── Logo ── */}
         <Logo />
 
-        {/* ── Desktop nav links ── */}
         <nav className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <Link
@@ -93,9 +72,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* ── Desktop right actions ── */}
         <div className="hidden lg:flex items-center gap-3">
-          {/* Phone */}
           <a
             href={`tel:${SITE.phoneRaw}`}
             className="flex items-center gap-2 text-[13px] font-semibold text-sky-brand hover:text-sky-dark transition-colors duration-200"
@@ -103,8 +80,6 @@ export default function Navbar() {
             <Phone className="w-4 h-4" strokeWidth={2} />
             {SITE.phone}
           </a>
-
-          {/* Book CTA */}
           <a
             href={waUrl}
             target="_blank"
@@ -115,7 +90,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* ── Mobile hamburger ── */}
         <button
           onClick={() => setMenuOpen((v) => !v)}
           className="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg text-navy hover:bg-off-white transition-colors"
@@ -129,7 +103,6 @@ export default function Navbar() {
         </button>
       </header>
 
-      {/* ── Mobile menu overlay ── */}
       {menuOpen && (
         <div
           className="fixed inset-0 z-40 bg-navy/60 backdrop-blur-sm lg:hidden"
@@ -137,7 +110,6 @@ export default function Navbar() {
         />
       )}
 
-      {/* ── Mobile menu drawer ── */}
       <div
         className={[
           'fixed top-[68px] inset-x-0 z-40 lg:hidden',
@@ -157,8 +129,6 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-
-          {/* Mobile actions */}
           <div className="flex flex-col gap-3 pt-4 pb-2">
             <a
               href={`tel:${SITE.phoneRaw}`}
