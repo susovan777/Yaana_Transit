@@ -35,7 +35,7 @@ const cardFadeUp = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const},
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
@@ -48,7 +48,7 @@ function ServiceCard({ service }: { service: Service }) {
   return (
     <motion.div
       variants={cardFadeUp}
-      className="group relative flex flex-col gap-5 p-8 md:p-10 bg-white/[0.04] border border-white/[0.08] overflow-hidden transition-colors duration-300 hover:bg-sky-brand/[0.08]"
+      className="group relative flex flex-col gap-5 p-8 md:p-10 bg-white/4 border border-white/8 overflow-hidden transition-colors duration-300 hover:bg-sky-brand/8"
     >
       {/* Animated top-border on hover */}
       <motion.span
@@ -77,7 +77,7 @@ function ServiceCard({ service }: { service: Service }) {
       </div>
 
       {/* Footer: price + CTA */}
-      <div className="flex items-center justify-between pt-4 border-t border-white/[0.08]">
+      <div className="flex items-center justify-between pt-4 border-t border-white/8">
         <span className="text-[13px] font-semibold text-[#7EB3FF]">
           {service.priceLabel}
         </span>
@@ -152,7 +152,7 @@ export default function ServicesSection() {
 
         {/* ── Services grid ── */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           variants={gridContainer}
           initial="hidden"
           whileInView="visible"
