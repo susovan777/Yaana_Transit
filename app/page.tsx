@@ -2,19 +2,17 @@
 
 // ─────────────────────────────────────────
 // HOME PAGE — app/page.tsx
-//
-// Sections will be added one by one:
-//   1. HeroSection
-//   2. TrustStrip
-//   3. FleetSection
-//   4. ServicesSection
-//   5. WhyUsSection
-//   6. CitiesSection
-//   7. TestimonialsSection
-//   8. InquirySection
 // ─────────────────────────────────────────
 
 import type { Metadata } from 'next';
+import HeroSection from '@/components/home/Hero';
+import TrustStrip from '@/components/home/TrustStrip';
+import FleetSection from '@/components/home/FleetSection';
+import ServicesSection from '@/components/home/ServiceSection';
+import WhyUsSection from '@/components/home/WhyUs';
+import CitiesSection from '@/components/home/Cities';
+import TestimonialsSection from '@/components/home/Testimonials';
+import InquirySection from '@/components/home/InquirySection';
 
 export const metadata: Metadata = {
   title: 'Home — Yana Transit | Car Rentals India',
@@ -24,18 +22,15 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-6">
-      <h1
-        className="text-4xl font-bold text-navy mb-4"
-        style={{ fontFamily: 'var(--font-display)' }}
-      >
-        Yana <span className="text-sky-brand">Transit</span>
-      </h1>
-      <p className="text-muted text-lg max-w-md leading-relaxed">
-        Sections are being built one by one. Navbar, Footer &amp; WhatsApp
-        button are live. Next up:{' '}
-        <strong className="text-navy">HeroSection</strong>.
-      </p>
-    </div>
+    <>
+      <HeroSection />
+      <TrustStrip />
+      <FleetSection />
+      <ServicesSection />
+      <WhyUsSection />
+      <CitiesSection />
+      <TestimonialsSection />
+      <InquirySection />
+    </>
   );
 }

@@ -91,7 +91,7 @@ export default function RootLayout({
         <Navbar />
 
         {/* Page content — push down by nav height */}
-        <main className="pt-[68px]">{children}</main>
+        <main>{children}</main>
 
         {/* Site-wide footer */}
         <Footer />
