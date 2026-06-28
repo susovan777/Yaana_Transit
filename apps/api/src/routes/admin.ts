@@ -20,11 +20,13 @@ import {
   updateUserStatus,
   resendInvite,
 } from '../controllers/admin.controller';
+import { getDashboard } from '@/controllers/dashboard.controller';
 
 const router: Router = Router();
 
 // Every admin route requires: valid JWT + YAANA_ADMIN role
 router.use(authenticate, authorize('YAANA_ADMIN'));
+router.get('/dashboard', getDashboard);
 
 // ── Companies ─────────────────────────────────────────────────────────
 router.post('/companies', validate(createCompanySchema), createCompany);
