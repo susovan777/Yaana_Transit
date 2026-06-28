@@ -37,7 +37,7 @@ const CONTACT_METHODS = [
     sub: 'Mon – Sat, 6 AM – 11 PM',
     href: `tel:${SITE.phone}`,
     bg: 'bg-[#EBF2FF]',
-    color: 'text-[#2E6FD8]',
+    color: 'text-[#3A6AB6]',
   },
   {
     icon: <MessageCircle className="w-5 h-5" strokeWidth={2} />,
@@ -79,7 +79,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="bg-[#0B1F3A] pt-32 pb-20 px-6 relative overflow-hidden">
+      <section className="bg-[#1C1F26] pt-32 pb-20 px-6 relative overflow-hidden">
         {/* Dot pattern */}
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
@@ -113,8 +113,8 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-[1fr_480px] gap-14 items-start">
             {/* Left — headline + contact methods */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-[#2E6FD8]/20 border border-[#2E6FD8]/35 text-[#7EB3FF] text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#7EB3FF] animate-pulse" />
+              <div className="inline-flex items-center gap-2 bg-[#3A6AB6]/20 border border-[#3A6AB6]/35 text-[#6B96D4] text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full mb-6">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#6B96D4] animate-pulse" />
                 Get in Touch
               </div>
 
@@ -123,7 +123,7 @@ export default function ContactPage() {
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 Let's talk{' '}
-                <em className="not-italic text-[#7EB3FF]">corporate travel</em>
+                <em className="not-italic text-[#6B96D4]">corporate travel</em>
               </h1>
 
               <p className="text-white/55 text-base md:text-lg leading-relaxed mb-10 max-w-lg">
@@ -183,7 +183,7 @@ export default function ContactPage() {
       {/* ── Office locations ─────────────────────────────────────── */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="flex items-center gap-3 mb-10">
-          <MapPin className="w-4 h-4 text-[#2E6FD8] shrink-0" strokeWidth={2} />
+          <MapPin className="w-4 h-4 text-[#3A6AB6] shrink-0" strokeWidth={2} />
           <h2 className="text-[13px] font-bold tracking-[2px] uppercase text-slate-400">
             Our Offices
           </h2>
@@ -191,10 +191,10 @@ export default function ContactPage() {
 
         {/* Head office — wide featured card */}
         {headOffice && (
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 bg-[#0B1F3A] rounded-2xl px-8 py-8 mb-5">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 bg-[#1C1F26] rounded-2xl px-8 py-8 mb-5">
             <div className="flex items-start gap-5">
-              <div className="w-12 h-12 rounded-xl bg-[#2E6FD8]/20 flex items-center justify-center shrink-0">
-                <MapPin className="w-5 h-5 text-[#7EB3FF]" strokeWidth={2} />
+              <div className="w-12 h-12 rounded-xl bg-[#3A6AB6]/20 flex items-center justify-center shrink-0">
+                <MapPin className="w-5 h-5 text-[#6B96D4]" strokeWidth={2} />
               </div>
               <div>
                 <div className="flex items-center gap-2.5 flex-wrap mb-1">
@@ -204,7 +204,7 @@ export default function ContactPage() {
                   >
                     {headOffice.name}
                   </span>
-                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#2E6FD8] text-white text-[10px] font-bold tracking-[0.8px] uppercase">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#3A6AB6] text-white text-[10px] font-bold tracking-[0.8px] uppercase">
                     ★ Head Office
                   </span>
                 </div>
@@ -224,7 +224,7 @@ export default function ContactPage() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#2E6FD8] hover:bg-[#2560C0] text-white text-[13px] font-semibold transition-all duration-200 hover:-translate-y-px shrink-0"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#3A6AB6] hover:bg-[#2560C0] text-white text-[13px] font-semibold transition-all duration-200 hover:-translate-y-px shrink-0"
             >
               <WhatsAppIcon size={14} />
               WhatsApp HQ
@@ -240,17 +240,17 @@ export default function ContactPage() {
               className="flex items-start gap-4 p-5 bg-slate-50 border border-slate-100 rounded-2xl hover:border-[#C5D9F5] hover:bg-[#EBF2FF]/30 transition-all duration-200"
             >
               <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center shrink-0">
-                <MapPin className="w-4 h-4 text-[#2E6FD8]" strokeWidth={2} />
+                <MapPin className="w-4 h-4 text-[#3A6AB6]" strokeWidth={2} />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-0.5">
                   <p
-                    className="text-[15px] font-bold text-[#0B1F3A]"
+                    className="text-[15px] font-bold text-[#1C1F26]"
                     style={{ fontFamily: 'var(--font-display)' }}
                   >
                     {office.name}
                   </p>
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-[#EBF2FF] text-[#2E6FD8] text-[10px] font-bold tracking-[0.6px] uppercase border border-[#DDEAFF]">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-[#EBF2FF] text-[#3A6AB6] text-[10px] font-bold tracking-[0.6px] uppercase border border-[#DDEAFF]">
                     Branch
                   </span>
                 </div>
@@ -261,7 +261,7 @@ export default function ContactPage() {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 mt-2.5 text-[12px] font-semibold text-[#2E6FD8] hover:text-[#0B1F3A] transition-colors duration-200"
+                  className="inline-flex items-center gap-1 mt-2.5 text-[12px] font-semibold text-[#3A6AB6] hover:text-[#1C1F26] transition-colors duration-200"
                 >
                   <WhatsAppIcon size={12} />
                   Enquire for {office.name}
@@ -276,7 +276,7 @@ export default function ContactPage() {
       <section className="bg-slate-50 border-y border-slate-100 py-16 px-6">
         <div className="max-w-3xl mx-auto">
           <h2
-            className="text-[22px] font-bold text-[#0B1F3A] mb-8 text-center"
+            className="text-[22px] font-bold text-[#1C1F26] mb-8 text-center"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Common Questions
@@ -305,7 +305,7 @@ export default function ContactPage() {
                 key={item.q}
                 className="bg-white rounded-xl border border-slate-200 p-5"
               >
-                <p className="text-[14px] font-semibold text-[#0B1F3A] mb-2">
+                <p className="text-[14px] font-semibold text-[#1C1F26] mb-2">
                   {item.q}
                 </p>
                 <p className="text-[13px] text-slate-500 leading-relaxed">
@@ -321,7 +321,7 @@ export default function ContactPage() {
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h2
-            className="text-2xl md:text-3xl font-bold text-[#0B1F3A] mb-3"
+            className="text-2xl md:text-3xl font-bold text-[#1C1F26] mb-3"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Prefer to just call?
@@ -333,7 +333,7 @@ export default function ContactPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
               href={`tel:${SITE.phone}`}
-              className="inline-flex items-center gap-2.5 bg-[#0B1F3A] hover:bg-[#2E6FD8] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#2E6FD8]/25 w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2.5 bg-[#1C1F26] hover:bg-[#3A6AB6] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#3A6AB6]/25 w-full sm:w-auto justify-center"
             >
               <Phone className="w-4 h-4" strokeWidth={2} />
               {SITE.phone}
@@ -344,7 +344,7 @@ export default function ContactPage() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 border border-slate-200 hover:border-[#0B1F3A] text-slate-600 hover:text-[#0B1F3A] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2.5 border border-slate-200 hover:border-[#1C1F26] text-slate-600 hover:text-[#1C1F26] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 w-full sm:w-auto justify-center"
             >
               <WhatsAppIcon size={16} />
               WhatsApp Us

@@ -64,9 +64,9 @@ function Field({
 }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-[12px] font-semibold text-[#0B1F3A] tracking-[0.3px]">
+      <label className="text-[12px] font-semibold text-[#1C1F26] tracking-[0.3px]">
         {label}
-        {required && <span className="text-[#2E6FD8] ml-0.5">*</span>}
+        {required && <span className="text-[#3A6AB6] ml-0.5">*</span>}
       </label>
       {children}
     </div>
@@ -75,7 +75,7 @@ function Field({
 
 // ── Shared input classes ──────────────────────────────────────────────
 const inputCls =
-  'w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-[14px] text-[#0B1F3A] placeholder:text-slate-400 outline-none transition-all duration-200 focus:border-[#2E6FD8] focus:ring-3 focus:ring-[#2E6FD8]/10 hover:border-slate-300';
+  'w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-[14px] text-[#1C1F26] placeholder:text-slate-400 outline-none transition-all duration-200 focus:border-[#3A6AB6] focus:ring-3 focus:ring-[#3A6AB6]/10 hover:border-slate-300';
 
 // ── Component ────────────────────────────────────────────────────────
 export default function EnquiryForm() {
@@ -123,8 +123,8 @@ export default function EnquiryForm() {
   return (
     <div className="relative bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
       {/* Card header */}
-      <div className="bg-[#0B1F3A] px-7 py-5">
-        <p className="text-[11px] font-bold tracking-[2px] uppercase text-[#7EB3FF] mb-1">
+      <div className="bg-[#1C1F26] px-7 py-5">
+        <p className="text-[11px] font-bold tracking-[2px] uppercase text-[#6B96D4] mb-1">
           Corporate Enquiry
         </p>
         <h3
@@ -152,12 +152,12 @@ export default function EnquiryForm() {
               className="flex flex-col items-center justify-center gap-4 py-10 text-center"
             >
               <CheckCircle2
-                className="w-12 h-12 text-[#2E6FD8]"
+                className="w-12 h-12 text-[#3A6AB6]"
                 strokeWidth={1.5}
               />
               <div>
                 <p
-                  className="text-[18px] font-bold text-[#0B1F3A] mb-1"
+                  className="text-[18px] font-bold text-[#1C1F26] mb-1"
                   style={{ fontFamily: 'var(--font-display)' }}
                 >
                   WhatsApp opened!
@@ -169,7 +169,7 @@ export default function EnquiryForm() {
               </div>
               <button
                 onClick={handleReset}
-                className="mt-2 text-[13px] font-semibold text-[#2E6FD8] hover:underline"
+                className="mt-2 text-[13px] font-semibold text-[#3A6AB6] hover:underline"
               >
                 Submit another enquiry
               </button>
@@ -283,7 +283,7 @@ export default function EnquiryForm() {
               {/* Submit */}
               <button
                 type="submit"
-                className="mt-1 w-full inline-flex items-center justify-center gap-2.5 bg-[#0B1F3A] hover:bg-[#2E6FD8] text-white font-semibold py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-px hover:shadow-lg hover:shadow-[#2E6FD8]/25 text-[14px]"
+                className="mt-1 w-full inline-flex items-center justify-center gap-2.5 bg-[#1C1F26] hover:bg-[#3A6AB6] text-white font-semibold py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-px hover:shadow-lg hover:shadow-[#3A6AB6]/25 text-[14px]"
               >
                 <Send className="w-4 h-4" strokeWidth={2} />
                 Send via WhatsApp

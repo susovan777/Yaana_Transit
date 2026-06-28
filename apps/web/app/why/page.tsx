@@ -3,11 +3,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Phone, ArrowRight, CheckCircle2 } from 'lucide-react';
-import {
-  USP_ITEMS,
-  FEATURE_CARDS,
-  HIGHLIGHT_CARD,
-} from '@/lib/data/why-us';
+import { USP_ITEMS, FEATURE_CARDS, HIGHLIGHT_CARD } from '@/lib/data/why-us';
 import { SITE, buildWhatsAppUrl } from '@/lib/constants';
 import { WhatsAppIcon } from '@/components/ui/SocialIcons';
 
@@ -26,12 +22,12 @@ export const metadata: Metadata = {
 
 // ── Supporting proof points (page-only, not in why-us.ts) ────────────
 const PROOF_POINTS = [
-  { value: '500+',  label: 'Corporate Clients' },
-  { value: '50K+',  label: 'Trips Completed' },
-  { value: '98%',   label: 'On-Time Rate' },
-  { value: '4.9★',  label: 'Average Rating' },
-  { value: '50+',   label: 'Cities Covered' },
-  { value: '24/7',  label: 'Support Available' },
+  { value: '500+', label: 'Corporate Clients' },
+  { value: '50K+', label: 'Trips Completed' },
+  { value: '98%', label: 'On-Time Rate' },
+  { value: '4.9★', label: 'Average Rating' },
+  { value: '50+', label: 'Cities Covered' },
+  { value: '24/7', label: 'Support Available' },
 ];
 
 // ── Comparison table data ─────────────────────────────────────────────
@@ -82,14 +78,14 @@ const COMPARISON = [
 export default function WhyPage() {
   return (
     <main className="min-h-screen bg-white">
-
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="bg-[#0B1F3A] pt-32 pb-20 px-6 relative overflow-hidden">
+      <section className="bg-[#1C1F26] pt-32 pb-20 px-6 relative overflow-hidden">
         {/* Dot pattern */}
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
-            backgroundImage: 'radial-gradient(circle, white 1.5px, transparent 1.5px)',
+            backgroundImage:
+              'radial-gradient(circle, white 1.5px, transparent 1.5px)',
             backgroundSize: '36px 36px',
           }}
         />
@@ -102,7 +98,10 @@ export default function WhyPage() {
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 text-sm text-white/40">
               <li>
-                <Link href="/" className="hover:text-white/70 transition-colors">
+                <Link
+                  href="/"
+                  className="hover:text-white/70 transition-colors"
+                >
                   Home
                 </Link>
               </li>
@@ -115,8 +114,8 @@ export default function WhyPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-[#2E6FD8]/20 border border-[#2E6FD8]/35 text-[#7EB3FF] text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#7EB3FF] animate-pulse" />
+              <div className="inline-flex items-center gap-2 bg-[#3A6AB6]/20 border border-[#3A6AB6]/35 text-[#6B96D4] text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full mb-6">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#6B96D4] animate-pulse" />
                 Why YAANA Transit
               </div>
 
@@ -125,13 +124,14 @@ export default function WhyPage() {
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 Corporate Travel,{' '}
-                <em className="not-italic text-[#7EB3FF]">Done Right</em>
+                <em className="not-italic text-[#6B96D4]">Done Right</em>
               </h1>
 
               <p className="text-white/55 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
                 500+ companies trust YAANA Transit for their employee transport,
                 executive travel, and event fleets — because we eliminate every
-                friction point between your team and a comfortable, on-time ride.
+                friction point between your team and a comfortable, on-time
+                ride.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -141,7 +141,7 @@ export default function WhyPage() {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#2E6FD8] hover:bg-[#2560C0] text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:-translate-y-px hover:shadow-lg hover:shadow-[#2E6FD8]/30"
+                  className="inline-flex items-center gap-2 bg-[#3A6AB6] hover:bg-[#2560C0] text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:-translate-y-px hover:shadow-lg hover:shadow-[#3A6AB6]/30"
                 >
                   <WhatsAppIcon size={16} />
                   Talk to Us
@@ -182,15 +182,14 @@ export default function WhyPage() {
       {/* ── Core USP items ───────────────────────────────────────── */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center mb-14">
-          <p className="text-[12px] font-bold tracking-[2.5px] uppercase text-[#2E6FD8] mb-3">
+          <p className="text-[12px] font-bold tracking-[2.5px] uppercase text-[#3A6AB6] mb-3">
             Our Commitments
           </p>
           <h2
-            className="text-[clamp(28px,3.5vw,42px)] font-bold text-[#0B1F3A] leading-tight"
+            className="text-[clamp(28px,3.5vw,42px)] font-bold text-[#1C1F26] leading-tight"
             style={{ fontFamily: 'var(--font-display)' }}
           >
-            What sets us{' '}
-            <em className="not-italic text-[#2E6FD8]">apart</em>
+            What sets us <em className="not-italic text-[#3A6AB6]">apart</em>
           </h2>
         </div>
 
@@ -207,12 +206,12 @@ export default function WhyPage() {
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3">
                   <span className="text-3xl">{item.icon}</span>
-                  <span className="text-[12px] font-bold tracking-[2px] uppercase text-[#2E6FD8]">
+                  <span className="text-[12px] font-bold tracking-[2px] uppercase text-[#3A6AB6]">
                     0{i + 1}
                   </span>
                 </div>
                 <h3
-                  className="text-[24px] md:text-[28px] font-bold text-[#0B1F3A] leading-snug"
+                  className="text-[24px] md:text-[28px] font-bold text-[#1C1F26] leading-snug"
                   style={{ fontFamily: 'var(--font-display)' }}
                 >
                   {item.title}
@@ -228,17 +227,17 @@ export default function WhyPage() {
                   i === 0
                     ? 'bg-[#EBF2FF]'
                     : i === 1
-                    ? 'bg-[#0B1F3A]'
+                    ? 'bg-[#1C1F26]'
                     : 'bg-slate-50'
                 }`}
               >
                 {i === 0 && (
                   <div className="text-center">
-                    <p className="text-[13px] font-semibold text-[#2E6FD8] uppercase tracking-widest mb-2">
+                    <p className="text-[13px] font-semibold text-[#3A6AB6] uppercase tracking-widest mb-2">
                       GST Registered
                     </p>
                     <p
-                      className="text-[48px] font-bold text-[#0B1F3A] leading-none"
+                      className="text-[48px] font-bold text-[#1C1F26] leading-none"
                       style={{ fontFamily: 'var(--font-display)' }}
                     >
                       18%
@@ -250,7 +249,7 @@ export default function WhyPage() {
                 )}
                 {i === 1 && (
                   <div className="text-center">
-                    <p className="text-[13px] font-semibold text-[#7EB3FF] uppercase tracking-widest mb-2">
+                    <p className="text-[13px] font-semibold text-[#6B96D4] uppercase tracking-widest mb-2">
                       Average Confirmation
                     </p>
                     <p
@@ -258,7 +257,7 @@ export default function WhyPage() {
                       style={{ fontFamily: 'var(--font-display)' }}
                     >
                       &lt;15
-                      <span className="text-[24px] text-[#7EB3FF] ml-1">
+                      <span className="text-[24px] text-[#6B96D4] ml-1">
                         min
                       </span>
                     </p>
@@ -269,11 +268,11 @@ export default function WhyPage() {
                 )}
                 {i === 2 && (
                   <div className="text-center">
-                    <p className="text-[13px] font-semibold text-[#2E6FD8] uppercase tracking-widest mb-2">
+                    <p className="text-[13px] font-semibold text-[#3A6AB6] uppercase tracking-widest mb-2">
                       Hidden charges
                     </p>
                     <p
-                      className="text-[64px] font-bold text-[#0B1F3A] leading-none"
+                      className="text-[64px] font-bold text-[#1C1F26] leading-none"
                       style={{ fontFamily: 'var(--font-display)' }}
                     >
                       ₹0
@@ -293,15 +292,15 @@ export default function WhyPage() {
       <section className="bg-slate-50 border-y border-slate-100 py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-[12px] font-bold tracking-[2.5px] uppercase text-[#2E6FD8] mb-3">
+            <p className="text-[12px] font-bold tracking-[2.5px] uppercase text-[#3A6AB6] mb-3">
               Our Standards
             </p>
             <h2
-              className="text-[clamp(26px,3vw,38px)] font-bold text-[#0B1F3A]"
+              className="text-[clamp(26px,3vw,38px)] font-bold text-[#1C1F26]"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Built for{' '}
-              <em className="not-italic text-[#2E6FD8]">corporate India</em>
+              <em className="not-italic text-[#3A6AB6]">corporate India</em>
             </h2>
           </div>
 
@@ -309,13 +308,13 @@ export default function WhyPage() {
             {FEATURE_CARDS.map((card) => (
               <div
                 key={card.id}
-                className="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-[#2E6FD8] hover:shadow-lg hover:shadow-[#2E6FD8]/8 transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-[#3A6AB6] hover:shadow-lg hover:shadow-[#3A6AB6]/8 transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#EBF2FF] group-hover:bg-[#0B1F3A] flex items-center justify-center text-2xl transition-colors duration-300 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-[#EBF2FF] group-hover:bg-[#1C1F26] flex items-center justify-center text-2xl transition-colors duration-300 mb-4">
                   {card.icon}
                 </div>
                 <h3
-                  className="text-[16px] font-bold text-[#0B1F3A] mb-2"
+                  className="text-[16px] font-bold text-[#1C1F26] mb-2"
                   style={{ fontFamily: 'var(--font-display)' }}
                 >
                   {card.title}
@@ -332,11 +331,11 @@ export default function WhyPage() {
       {/* ── Comparison table ─────────────────────────────────────── */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center mb-12">
-          <p className="text-[12px] font-bold tracking-[2.5px] uppercase text-[#2E6FD8] mb-3">
+          <p className="text-[12px] font-bold tracking-[2.5px] uppercase text-[#3A6AB6] mb-3">
             How We Compare
           </p>
           <h2
-            className="text-[clamp(26px,3vw,38px)] font-bold text-[#0B1F3A]"
+            className="text-[clamp(26px,3vw,38px)] font-bold text-[#1C1F26]"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             YAANA Transit vs{' '}
@@ -346,7 +345,7 @@ export default function WhyPage() {
 
         <div className="max-w-3xl mx-auto rounded-2xl border border-slate-200 overflow-hidden">
           {/* Table header */}
-          <div className="grid grid-cols-[1fr_120px_120px] bg-[#0B1F3A] px-6 py-4">
+          <div className="grid grid-cols-[1fr_120px_120px] bg-[#1C1F26] px-6 py-4">
             <span className="text-[12px] font-bold tracking-[1.5px] uppercase text-white/40">
               Feature
             </span>
@@ -372,7 +371,7 @@ export default function WhyPage() {
               <div className="flex justify-center">
                 {row.yaana ? (
                   <CheckCircle2
-                    className="w-5 h-5 text-[#2E6FD8]"
+                    className="w-5 h-5 text-[#3A6AB6]"
                     strokeWidth={2.5}
                   />
                 ) : (
@@ -399,7 +398,7 @@ export default function WhyPage() {
       </section>
 
       {/* ── WhatsApp highlight card ──────────────────────────────── */}
-      <section className="bg-[#0B1F3A] py-16 px-6">
+      <section className="bg-[#1C1F26] py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 bg-white/5 border border-white/10 rounded-2xl px-8 py-10">
             <div className="flex items-start gap-5">
@@ -422,7 +421,7 @@ export default function WhyPage() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-[#2E6FD8] hover:bg-[#2560C0] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 hover:-translate-y-px hover:shadow-lg hover:shadow-[#2E6FD8]/30 shrink-0"
+              className="inline-flex items-center gap-2.5 bg-[#3A6AB6] hover:bg-[#2560C0] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 hover:-translate-y-px hover:shadow-lg hover:shadow-[#3A6AB6]/30 shrink-0"
             >
               <WhatsAppIcon size={16} />
               Book on WhatsApp
@@ -435,7 +434,7 @@ export default function WhyPage() {
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h2
-            className="text-2xl md:text-3xl font-bold text-[#0B1F3A] mb-3"
+            className="text-2xl md:text-3xl font-bold text-[#1C1F26] mb-3"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Ready to simplify your corporate travel?
@@ -451,14 +450,14 @@ export default function WhyPage() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-[#0B1F3A] hover:bg-[#2E6FD8] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#2E6FD8]/25 w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2.5 bg-[#1C1F26] hover:bg-[#3A6AB6] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#3A6AB6]/25 w-full sm:w-auto justify-center"
             >
               <WhatsAppIcon size={16} />
               Set Up Corporate Account
             </Link>
             <Link
               href={`tel:${SITE.phone}`}
-              className="inline-flex items-center gap-2.5 border border-slate-200 hover:border-[#0B1F3A] text-slate-600 hover:text-[#0B1F3A] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2.5 border border-slate-200 hover:border-[#1C1F26] text-slate-600 hover:text-[#1C1F26] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 w-full sm:w-auto justify-center"
             >
               <Phone className="w-4 h-4" strokeWidth={2} />
               {SITE.phone}
@@ -466,7 +465,6 @@ export default function WhyPage() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }

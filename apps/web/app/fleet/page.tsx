@@ -45,7 +45,7 @@ export default function FleetPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* ── Page hero ──────────────────────────────────────────── */}
-      <section className="bg-[#0B1F3A] pt-32 pb-16 px-6 relative overflow-hidden">
+      <section className="bg-[#1C1F26] pt-32 pb-16 px-6 relative overflow-hidden">
         {/* Dot pattern — matches homepage hero */}
         <div
           className="absolute inset-0 opacity-[0.04]"
@@ -77,14 +77,14 @@ export default function FleetPage() {
           </nav>
 
           {/* Pill */}
-          <div className="inline-flex items-center gap-2 bg-[#2E6FD8]/20 border border-[#2E6FD8]/35 text-[#7EB3FF] text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#7EB3FF] animate-pulse" />
+          <div className="inline-flex items-center gap-2 bg-[#3A6AB6]/20 border border-[#3A6AB6]/35 text-[#6B96D4] text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#6B96D4] animate-pulse" />
             Our Fleet
           </div>
 
           <h1 className="font-poppins text-4xl md:text-5xl font-semibold text-white leading-tight mb-4">
             Vehicles for{' '}
-            <em className="not-italic text-[#7EB3FF]">Every Journey</em>
+            <em className="not-italic text-[#6B96D4]">Every Journey</em>
           </h1>
           <p className="text-white/55 text-base md:text-lg leading-relaxed max-w-xl">
             Sedan to luxury — every vehicle is chauffeur-driven, fully insured,
@@ -120,7 +120,7 @@ export default function FleetPage() {
       {/* ── Bottom CTA ─────────────────────────────────────────── */}
       <section className="bg-slate-50 border-t border-slate-100 py-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-poppins text-2xl md:text-3xl font-semibold text-[#0B1F3A] mb-3">
+          <h2 className="font-poppins text-2xl md:text-3xl font-semibold text-[#1C1F26] mb-3">
             Can't find the right car?
           </h2>
           <p className="text-slate-500 text-base mb-8">
@@ -133,7 +133,7 @@ export default function FleetPage() {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#0B1F3A] hover:bg-[#2E6FD8] text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#2E6FD8]/25"
+            className="inline-flex items-center gap-3 bg-[#1C1F26] hover:bg-[#3A6AB6] text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#3A6AB6]/25"
           >
             {/* WhatsApp icon */}
             <WhatsAppIcon size={18} />

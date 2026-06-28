@@ -14,12 +14,6 @@ import {
   ReportsPage,
   UsersPage,
 } from './pages/stubs';
-// import { CompaniesPage } from './pages/CompaniesPage';
-// import { FleetPage } from './pages/FleetPage';
-// import { BookingsPage } from './pages/BookingsPage';
-// import { InvoicesPage } from './pages/InvoicesPage';
-// import { ReportsPage } from './pages/ReportsPage';
-// import { UsersPage } from './pages/UsersPage';
 
 export default function App() {
   return (

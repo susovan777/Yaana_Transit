@@ -54,18 +54,18 @@ export default function ServicesGrid({ services }: ServicesGridProps) {
             variants={cardVariants}
             whileHover={{ y: -5 }}
             transition={{ type: 'spring', stiffness: 300, damping: 24 }}
-            className="group relative flex flex-col bg-white rounded-2xl border-[1.5px] border-slate-200 p-7 hover:border-[#2E6FD8] hover:shadow-xl hover:shadow-[#2E6FD8]/8 transition-shadow duration-300 overflow-hidden"
+            className="group relative flex flex-col bg-white rounded-2xl border-[1.5px] border-slate-200 p-7 hover:border-[#3A6AB6] hover:shadow-xl hover:shadow-[#3A6AB6]/8 transition-shadow duration-300 overflow-hidden"
           >
             {/* Top accent line — slides in on hover */}
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#2E6FD8] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#3A6AB6] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
 
             {/* Icon */}
-            <div className="w-12 h-12 rounded-xl bg-slate-100 group-hover:bg-[#0B1F3A] flex items-center justify-center text-2xl transition-colors duration-300 mb-5 shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-slate-100 group-hover:bg-[#1C1F26] flex items-center justify-center text-2xl transition-colors duration-300 mb-5 shrink-0">
               {service.icon}
             </div>
 
             {/* Name */}
-            <h3 className="font-poppins text-lg font-semibold text-[#0B1F3A] mb-2">
+            <h3 className="font-poppins text-lg font-semibold text-[#1C1F26] mb-2">
               {service.name}
             </h3>
 
@@ -84,7 +84,7 @@ export default function ServicesGrid({ services }: ServicesGridProps) {
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2E6FD8] hover:gap-2.5 transition-all duration-200 group/cta"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#3A6AB6] hover:gap-2.5 transition-all duration-200 group/cta"
               >
                 Enquire
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover/cta:translate-x-1" />

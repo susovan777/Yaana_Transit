@@ -236,7 +236,7 @@ export default function FleetSection() {
           </div>
 
           {/* Right: filter tabs */}
-          <motion.div
+          {/* <motion.div
             variants={headerItem}
             className="flex items-center gap-2 flex-wrap"
           >
@@ -253,7 +253,6 @@ export default function FleetSection() {
                   }
                 `}
               >
-                {/* Sliding bg for active tab */}
                 {activeTab === tab && (
                   <motion.span
                     layoutId="fleet-tab-active"
@@ -264,7 +263,7 @@ export default function FleetSection() {
                 {tab}
               </button>
             ))}
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         {/* ── Grid ── */}

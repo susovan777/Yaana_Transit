@@ -38,7 +38,7 @@ export default function FleetClient({ cars }: FleetClientProps) {
           {active !== 'all' && (
             <button
               onClick={() => setActive('all')}
-              className="ml-2 text-[#2E6FD8] hover:underline font-medium"
+              className="ml-2 text-[#3A6AB6] hover:underline font-medium"
             >
               Clear filter
             </button>

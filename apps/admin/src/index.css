@@ -6,15 +6,15 @@
 @theme {
   /* ── Brand colors ─────────────────────────────────────────── */
   --color-navy-950: #060f1c;
-  --color-navy-900: #0b1f3a; /* sidebar bg, primary dark */
+  --color-navy-900: #1c1f26; /* sidebar bg, primary dark */
   --color-navy-800: #12305a;
   --color-navy-700: #1a4a7a;
   --color-navy-600: #1e5490;
 
-  --color-sky-600: #2e6fd8; /* primary accent */
+  --color-sky-600: #3a6ab6; /* primary accent */
   --color-sky-500: #4a8aea;
-  --color-sky-400: #7eb3ff;
-  --color-sky-100: #e8f0fe;
+  --color-sky-400: #6b96d4;
+  --color-sky-100: #ebf1fb;
   --color-sky-50: #f0f5ff;
 
   --color-content-bg: #f7f9fc; /* main content area background */

@@ -159,7 +159,7 @@ export default function CitiesPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="bg-[#0B1F3A] pt-32 pb-16 px-6 relative overflow-hidden">
+      <section className="bg-[#1C1F26] pt-32 pb-16 px-6 relative overflow-hidden">
         {/* Dot pattern */}
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
@@ -190,8 +190,8 @@ export default function CitiesPage() {
           </nav>
 
           {/* Pill */}
-          <div className="inline-flex items-center gap-2 bg-[#2E6FD8]/20 border border-[#2E6FD8]/35 text-[#7EB3FF] text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#7EB3FF] animate-pulse" />
+          <div className="inline-flex items-center gap-2 bg-[#3A6AB6]/20 border border-[#3A6AB6]/35 text-[#6B96D4] text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#6B96D4] animate-pulse" />
             Our Presence
           </div>
 
@@ -200,7 +200,7 @@ export default function CitiesPage() {
             style={{ fontFamily: 'var(--font-display)' }}
           >
             One Partner,{' '}
-            <em className="not-italic text-[#7EB3FF]">Every City</em>
+            <em className="not-italic text-[#6B96D4]">Every City</em>
           </h1>
 
           <p className="text-white/55 text-base md:text-lg leading-relaxed max-w-xl mb-10">
@@ -244,7 +244,7 @@ export default function CitiesPage() {
           if (!headCity) return null;
           return (
             <div className="mb-6">
-              <div className="group relative flex flex-col lg:flex-row bg-[#0B1F3A] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="group relative flex flex-col lg:flex-row bg-[#1C1F26] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                 {/* Image — takes 40% width on desktop */}
                 <div className="relative h-[220px] lg:h-auto lg:w-[40%] shrink-0 overflow-hidden">
                   <div
@@ -349,7 +349,7 @@ export default function CitiesPage() {
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h2
-            className="text-2xl md:text-3xl font-bold text-[#0B1F3A] mb-3"
+            className="text-2xl md:text-3xl font-bold text-[#1C1F26] mb-3"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Need service in a city not listed?
@@ -365,14 +365,14 @@ export default function CitiesPage() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-[#0B1F3A] hover:bg-[#2E6FD8] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#2E6FD8]/25 w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2.5 bg-[#1C1F26] hover:bg-[#3A6AB6] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#3A6AB6]/25 w-full sm:w-auto justify-center"
             >
               <WhatsAppIcon size={16} />
               Chat on WhatsApp
             </Link>
             <Link
               href={`tel:${SITE.phone}`}
-              className="inline-flex items-center gap-2.5 border border-slate-200 hover:border-[#0B1F3A] text-slate-600 hover:text-[#0B1F3A] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2.5 border border-slate-200 hover:border-[#1C1F26] text-slate-600 hover:text-[#1C1F26] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 w-full sm:w-auto justify-center"
             >
               <Phone className="w-4 h-4" strokeWidth={2} />
               {SITE.phone}

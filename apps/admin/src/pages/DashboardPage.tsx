@@ -4,7 +4,7 @@ export function DashboardPage() {
     <div>
       <div className="mb-6">
         <h2
-          className="text-xl font-semibold text-[#0B1F3A]"
+          className="text-xl font-semibold text-[#1C1F26]"
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           Good morning 👋
@@ -28,7 +28,7 @@ export function DashboardPage() {
               {s.label}
             </p>
             <p
-              className="text-3xl font-bold text-[#0B1F3A]"
+              className="text-3xl font-bold text-[#1C1F26]"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               {s.value}

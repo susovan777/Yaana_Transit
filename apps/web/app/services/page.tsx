@@ -46,7 +46,7 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* ── Hero ───────────────────────────────────────────────── */}
-      <section className="bg-[#0B1F3A] pt-32 pb-16 px-6 relative overflow-hidden">
+      <section className="bg-[#1C1F26] pt-32 pb-16 px-6 relative overflow-hidden">
         {/* Dot pattern */}
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
@@ -78,14 +78,14 @@ export default function ServicesPage() {
           </nav>
 
           {/* Eyebrow pill */}
-          <div className="inline-flex items-center gap-2 bg-[#2E6FD8]/20 border border-[#2E6FD8]/35 text-[#7EB3FF] text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#7EB3FF] animate-pulse" />
+          <div className="inline-flex items-center gap-2 bg-[#3A6AB6]/20 border border-[#3A6AB6]/35 text-[#6B96D4] text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#6B96D4] animate-pulse" />
             What We Offer
           </div>
 
           <h1 className="font-poppins text-4xl md:text-5xl font-semibold text-white leading-tight mb-4">
             Services Built for{' '}
-            <em className="not-italic text-[#7EB3FF]">India</em>
+            <em className="not-italic text-[#6B96D4]">India</em>
           </h1>
 
           <p className="text-white/55 text-base md:text-lg leading-relaxed max-w-xl">
@@ -121,15 +121,15 @@ export default function ServicesPage() {
       </section>
 
       {/* ── "How to Book" steps ─────────────────────────────────── */}
-      <section className="bg-[#0B1F3A] py-16 px-6">
+      <section className="bg-[#1C1F26] py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-[#7EB3FF] text-xs font-semibold tracking-[2px] uppercase mb-3">
+            <p className="text-[#6B96D4] text-xs font-semibold tracking-[2px] uppercase mb-3">
               How It Works
             </p>
             <h2 className="font-poppins text-2xl md:text-3xl font-semibold text-white">
               On the Road in{' '}
-              <em className="not-italic text-[#7EB3FF]">3 Minutes</em>
+              <em className="not-italic text-[#6B96D4]">3 Minutes</em>
             </h2>
           </div>
 
@@ -197,7 +197,7 @@ export default function ServicesPage() {
       {/* ── Bottom CTA ──────────────────────────────────────────── */}
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-poppins text-2xl md:text-3xl font-semibold text-[#0B1F3A] mb-3">
+          <h2 className="font-poppins text-2xl md:text-3xl font-semibold text-[#1C1F26] mb-3">
             Not sure which service fits?
           </h2>
           <p className="text-slate-500 text-base mb-8 max-w-lg mx-auto">
@@ -211,7 +211,7 @@ export default function ServicesPage() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-[#0B1F3A] hover:bg-[#2E6FD8] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#2E6FD8]/25 w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2.5 bg-[#1C1F26] hover:bg-[#3A6AB6] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#3A6AB6]/25 w-full sm:w-auto justify-center"
             >
               {/* WhatsApp icon */}
               <WhatsAppIcon size={18} />
@@ -219,7 +219,7 @@ export default function ServicesPage() {
             </Link>
             <Link
               href={`tel:${SITE.phone}`}
-              className="inline-flex items-center gap-2.5 border border-slate-200 hover:border-[#0B1F3A] text-slate-600 hover:text-[#0B1F3A] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2.5 border border-slate-200 hover:border-[#1C1F26] text-slate-600 hover:text-[#1C1F26] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 w-full sm:w-auto justify-center"
             >
               📞 {SITE.phone}
             </Link>

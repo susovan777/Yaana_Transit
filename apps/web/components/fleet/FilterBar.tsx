@@ -34,21 +34,21 @@ export default function FilterBar({ active, onChange }: FilterBarProps) {
             role="tab"
             aria-selected={isActive}
             onClick={() => onChange(cat.value as CarCategory | 'all')}
-            className="relative px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-[#2E6FD8] focus-visible:ring-offset-2"
+            className="relative px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-[#3A6AB6] focus-visible:ring-offset-2"
           >
             {/* Animated active pill — slides under the text */}
             {isActive && (
               <motion.span
                 layoutId="fleet-filter-pill"
                 transition={{ type: 'spring', stiffness: 380, damping: 34 }}
-                className="absolute inset-0 rounded-full bg-[#0B1F3A]"
+                className="absolute inset-0 rounded-full bg-[#1C1F26]"
               />
             )}
 
             {/* Label — sits above the animated pill */}
             <span
               className={`relative z-10 transition-colors duration-200 ${
-                isActive ? 'text-white' : 'text-slate-500 hover:text-[#0B1F3A]'
+                isActive ? 'text-white' : 'text-slate-500 hover:text-[#1C1F26]'
               }`}
             >
               {cat.label}

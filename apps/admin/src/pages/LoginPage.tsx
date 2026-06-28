@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import toast from 'react-hot-toast';
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../store/auth.store';
-import { Car, Eye, EyeOff } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 
@@ -52,19 +52,11 @@ export function LoginPage() {
       {/* Left panel — navy brand side */}
       <div
         className="hidden lg:flex flex-col justify-between w-[420px] shrink-0 p-10"
-        style={{ background: '#0B1F3A' }}
+        style={{ background: '#1C1F26' }}
       >
         {/* Logo */}
         <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-lg bg-[#2E6FD8] flex items-center justify-center">
-            <Car size={18} className="text-white" />
-          </div>
-          <span
-            className="text-white font-semibold text-lg"
-            style={{ fontFamily: 'Poppins, sans-serif' }}
-          >
-            Yana Transit
-          </span>
+          <img src="/logo.png" alt="Yaana Logo" className="w-52" />
         </div>
 
         {/* Middle copy */}
@@ -78,7 +70,7 @@ export function LoginPage() {
           >
             Manage your fleet,
             <br />
-            <span className="text-[#7EB3FF]">effortlessly.</span>
+            <span className="text-[#6B96D4]">effortlessly.</span>
           </h2>
           <p className="text-white/45 text-sm leading-relaxed max-w-xs">
             The operations hub for Yana Transit — bookings, invoices, fleet and
@@ -108,22 +100,14 @@ export function LoginPage() {
 
       {/* Right panel — login form */}
       <div className="flex-1 flex items-center justify-center p-6">
-        <div className="w-full max-w-[400px]">
+        <div className="w-full max-w-[400px] py-6 sm:py-8 px-5 sm:px-8 shadow-xl lg:shadow-lg rounded-2xl">
           {/* Mobile logo */}
-          <div className="flex items-center gap-2 mb-8 lg:hidden">
-            <div className="w-8 h-8 rounded-lg bg-[#0B1F3A] flex items-center justify-center">
-              <Car size={16} className="text-white" />
-            </div>
-            <span
-              className="text-[#0B1F3A] font-semibold text-base"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
-            >
-              Yana Transit
-            </span>
+          <div className="flex items-center justify-center gap-2 mb-8 lg:hidden">
+            <img src="/logo.png" alt="Yaana Logo" className="w-48" />
           </div>
 
           <h1
-            className="text-2xl font-bold text-[#0B1F3A] mb-1"
+            className="text-2xl font-bold text-[#1C1F26] mb-1"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
             Sign in
@@ -135,7 +119,7 @@ export function LoginPage() {
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             {/* Email */}
             <div>
-              <label className="block text-xs font-semibold text-[#0B1F3A] mb-1.5 tracking-wide uppercase">
+              <label className="block text-xs font-semibold text-[#1C1F26] mb-1.5 tracking-wide uppercase">
                 Email address
               </label>
               <input
@@ -143,7 +127,7 @@ export function LoginPage() {
                 type="email"
                 placeholder="you@company.in"
                 autoComplete="email"
-                className="w-full px-3.5 py-2.5 rounded-lg border text-sm text-[#0B1F3A] placeholder-[#A0AEC0] outline-none transition-all"
+                className="w-full px-3.5 py-2.5 rounded-lg border text-sm text-[#1C1F26] placeholder-[#A0AEC0] outline-none transition-all"
                 style={{
                   borderColor: errors.email ? '#EF4444' : '#E2E8F2',
                   background: '#fff',
@@ -151,7 +135,7 @@ export function LoginPage() {
                     ? '0 0 0 3px rgba(239,68,68,0.08)'
                     : undefined,
                 }}
-                onFocus={(e) => (e.target.style.borderColor = '#2E6FD8')}
+                onFocus={(e) => (e.target.style.borderColor = '#3A6AB6')}
                 onBlur={(e) =>
                   (e.target.style.borderColor = errors.email
                     ? '#EF4444'
@@ -167,7 +151,7 @@ export function LoginPage() {
 
             {/* Password */}
             <div>
-              <label className="block text-xs font-semibold text-[#0B1F3A] mb-1.5 tracking-wide uppercase">
+              <label className="block text-xs font-semibold text-[#1C1F26] mb-1.5 tracking-wide uppercase">
                 Password
               </label>
               <div className="relative">
@@ -176,12 +160,12 @@ export function LoginPage() {
                   type={showPassword ? 'text' : 'password'}
                   placeholder="••••••••"
                   autoComplete="current-password"
-                  className="w-full px-3.5 py-2.5 pr-10 rounded-lg border text-sm text-[#0B1F3A] placeholder-[#A0AEC0] outline-none transition-all"
+                  className="w-full px-3.5 py-2.5 pr-10 rounded-lg border text-sm text-[#1C1F26] placeholder-[#A0AEC0] outline-none transition-all"
                   style={{
                     borderColor: errors.password ? '#EF4444' : '#E2E8F2',
                     background: '#fff',
                   }}
-                  onFocus={(e) => (e.target.style.borderColor = '#2E6FD8')}
+                  onFocus={(e) => (e.target.style.borderColor = '#3A6AB6')}
                   onBlur={(e) =>
                     (e.target.style.borderColor = errors.password
                       ? '#EF4444'
@@ -208,7 +192,7 @@ export function LoginPage() {
             <div className="flex justify-end">
               <a
                 href="/forgot-password"
-                className="text-xs text-[#2E6FD8] hover:underline"
+                className="text-xs text-[#3A6AB6] hover:underline"
               >
                 Forgot password?
               </a>
@@ -220,7 +204,7 @@ export function LoginPage() {
               disabled={isSubmitting}
               className="w-full py-2.5 rounded-lg text-sm font-semibold text-white transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               style={{
-                background: isSubmitting ? '#6B9EE8' : '#2E6FD8',
+                background: isSubmitting ? '#6B9EE8' : '#3A6AB6',
                 fontFamily: 'Poppins, sans-serif',
               }}
             >

@@ -117,7 +117,7 @@ function buildInvitationHtml(p: InvitationHtmlParams): string {
 
         <!-- Header -->
         <tr>
-          <td style="background:#0B1F3A;padding:28px 40px;">
+          <td style="background:#1C1F26;padding:28px 40px;">
             <p style="margin:0;font-size:22px;font-weight:700;color:#ffffff;letter-spacing:0.5px;">
               Yana Transit
             </p>
@@ -130,7 +130,7 @@ function buildInvitationHtml(p: InvitationHtmlParams): string {
         <!-- Body -->
         <tr>
           <td style="padding:40px;">
-            <p style="margin:0 0 8px;font-size:24px;font-weight:600;color:#0B1F3A;">
+            <p style="margin:0 0 8px;font-size:24px;font-weight:600;color:#1C1F26;">
               You're invited, ${p.toName}
             </p>
             <p style="margin:0 0 24px;font-size:15px;color:#6B7A90;line-height:1.6;">
@@ -146,7 +146,7 @@ function buildInvitationHtml(p: InvitationHtmlParams): string {
             <!-- CTA Button -->
             <table cellpadding="0" cellspacing="0" style="margin:28px 0;">
               <tr>
-                <td style="background:#2E6FD8;border-radius:8px;">
+                <td style="background:#3A6AB6;border-radius:8px;">
                   <a href="${p.activationUrl}"
                      style="display:inline-block;padding:14px 32px;font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;letter-spacing:0.3px;">
                     Activate My Account →
@@ -157,7 +157,7 @@ function buildInvitationHtml(p: InvitationHtmlParams): string {
 
             <p style="margin:0;font-size:12px;color:#A0AEC0;line-height:1.6;">
               If the button doesn't work, copy and paste this link into your browser:<br>
-              <a href="${p.activationUrl}" style="color:#2E6FD8;word-break:break-all;">${p.activationUrl}</a>
+              <a href="${p.activationUrl}" style="color:#3A6AB6;word-break:break-all;">${p.activationUrl}</a>
             </p>
           </td>
         </tr>
@@ -196,7 +196,7 @@ function buildPasswordResetHtml(p: PasswordResetHtmlParams): string {
 
         <!-- Header -->
         <tr>
-          <td style="background:#0B1F3A;padding:28px 40px;">
+          <td style="background:#1C1F26;padding:28px 40px;">
             <p style="margin:0;font-size:22px;font-weight:700;color:#ffffff;">Yana Transit</p>
             <p style="margin:4px 0 0;font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;">Driven by Trust</p>
           </td>
@@ -205,7 +205,7 @@ function buildPasswordResetHtml(p: PasswordResetHtmlParams): string {
         <!-- Body -->
         <tr>
           <td style="padding:40px;">
-            <p style="margin:0 0 8px;font-size:24px;font-weight:600;color:#0B1F3A;">
+            <p style="margin:0 0 8px;font-size:24px;font-weight:600;color:#1C1F26;">
               Reset your password
             </p>
             <p style="margin:0 0 24px;font-size:15px;color:#6B7A90;line-height:1.6;">
@@ -217,7 +217,7 @@ function buildPasswordResetHtml(p: PasswordResetHtmlParams): string {
 
             <table cellpadding="0" cellspacing="0" style="margin:28px 0;">
               <tr>
-                <td style="background:#2E6FD8;border-radius:8px;">
+                <td style="background:#3A6AB6;border-radius:8px;">
                   <a href="${p.resetUrl}"
                      style="display:inline-block;padding:14px 32px;font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;">
                     Reset Password →
@@ -230,7 +230,7 @@ function buildPasswordResetHtml(p: PasswordResetHtmlParams): string {
               If you didn't request a password reset, ignore this email — your password won't change.<br><br>
               Link: <a href="${
                 p.resetUrl
-              }" style="color:#2E6FD8;word-break:break-all;">${p.resetUrl}</a>
+              }" style="color:#3A6AB6;word-break:break-all;">${p.resetUrl}</a>
             </p>
           </td>
         </tr>

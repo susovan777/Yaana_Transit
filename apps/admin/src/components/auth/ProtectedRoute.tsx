@@ -11,7 +11,7 @@ export function ProtectedRoute() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#F7F9FC]">
         <div className="flex flex-col items-center gap-3">
-          <div className="w-8 h-8 border-2 border-[#2E6FD8] border-t-transparent rounded-full animate-spin" />
+          <div className="w-8 h-8 border-2 border-[#3A6AB6] border-t-transparent rounded-full animate-spin" />
           <span className="text-sm text-[#6B7A90] font-[Outfit]">
             Loading...
           </span>

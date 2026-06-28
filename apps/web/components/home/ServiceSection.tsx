@@ -129,7 +129,7 @@ export default function ServicesSection() {
         >
           <motion.div
             variants={fadeUp}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-sky-brand/20 border border-sky-brand/35 text-[12px] font-semibold text-[#7EB3FF] tracking-[0.5px] mb-4"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-sky-brand/20 border border-sky-brand/35 text-[12px] font-semibold text-[#6B96D4] tracking-[0.5px] mb-4"
           >
             ⚙️ What We Offer
           </motion.div>
@@ -139,7 +139,7 @@ export default function ServicesSection() {
             className="text-[clamp(32px,4vw,48px)] font-bold leading-[1.12] text-white"
             style={{ fontFamily: 'var(--font-display)' }}
           >
-            Every Kind of <em className="not-italic text-[#7EB3FF]">Ride</em>
+            Every Kind of <em className="not-italic text-[#6B96D4]">Ride</em>
           </motion.h2>
 
           <motion.p

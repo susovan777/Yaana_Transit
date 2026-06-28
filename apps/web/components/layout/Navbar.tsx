@@ -47,7 +47,7 @@ export default function Navbar() {
           scrolled ? 'shadow-[0_4px_24px_rgba(11,31,58,0.08)]' : '',
         ].join(' ')}
       >
-        <Logo src="/logo-nav.png" width="w-[200px]" height="h-[150px]" />
+        <Logo src="/logo.png" width="w-[200px]" height="h-[150px]" />
 
         <nav className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (

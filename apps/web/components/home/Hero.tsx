@@ -76,10 +76,10 @@ function HeroBadge() {
   return (
     <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-brand/18 border border-sky-brand/35">
       <motion.span
-        className="w-1.5 h-1.5 rounded-full bg-[#7EB3FF]"
+        className="w-1.5 h-1.5 rounded-full bg-[#6B96D4]"
         animate={pulseDot.animate}
       />
-      <span className="text-[12px] font-semibold text-[#7EB3FF] tracking-[0.5px]">
+      <span className="text-[12px] font-semibold text-[#6B96D4] tracking-[0.5px]">
         Pan-India Car Rentals — 50+ Cities
       </span>
     </div>
@@ -103,7 +103,7 @@ function HeroHeading() {
       className="text-[clamp(40px,5vw,68px)] font-bold leading-[1.1] text-white"
       style={{ fontFamily: 'var(--font-display)' }}
     >
-      Your Journey, <em className="not-italic text-[#7EB3FF]">Our</em>{' '}
+      Your Journey, <em className="not-italic text-[#6B96D4]">Our</em>{' '}
       Commitment
     </h1>
   );

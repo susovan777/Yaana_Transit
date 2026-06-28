@@ -60,7 +60,7 @@ function ContactItem({
 }) {
   return (
     <div className="flex items-center gap-4">
-      <div className="flex items-center justify-center w-10 h-10 rounded-btn bg-sky-brand/25 text-[#7EB3FF] shrink-0">
+      <div className="flex items-center justify-center w-10 h-10 rounded-btn bg-sky-brand/25 text-[#6B96D4] shrink-0">
         {icon}
       </div>
       <div className="text-[14px] text-white/80">{children}</div>
@@ -200,7 +200,7 @@ export default function InquirySection() {
               <div>
                 <motion.div
                   variants={fadeLeft}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-sky-brand/20 border border-sky-brand/35 text-[12px] font-semibold text-[#7EB3FF] tracking-[0.5px] mb-4"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-sky-brand/20 border border-sky-brand/35 text-[12px] font-semibold text-[#6B96D4] tracking-[0.5px] mb-4"
                 >
                   📞 Get in Touch
                 </motion.div>
@@ -210,7 +210,7 @@ export default function InquirySection() {
                   className="text-[clamp(28px,3.5vw,44px)] font-bold leading-[1.12] text-white"
                   style={{ fontFamily: 'var(--font-display)' }}
                 >
-                  Book by <em className="not-italic text-[#7EB3FF]">Call</em>
+                  Book by <em className="not-italic text-[#6B96D4]">Call</em>
                   <br />
                   or WhatsApp
                 </motion.h2>

@@ -55,7 +55,7 @@ function PageShell({
     <div>
       <div className="mb-6">
         <h2
-          className="text-xl font-semibold text-[#0B1F3A]"
+          className="text-xl font-semibold text-[#1C1F26]"
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           {title}

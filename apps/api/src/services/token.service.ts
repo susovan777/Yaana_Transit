@@ -92,11 +92,15 @@ export function generateSecureToken(): RefreshTokenPair {
 export const REFRESH_TOKEN_COOKIE = 'yaana_refresh';
 
 export const refreshCookieOptions = {
-  httpOnly: true, // JS cannot read this cookie — blocks XSS
-  secure: process.env.NODE_ENV === 'production', // HTTPS only in prod
-  sameSite: 'strict' as const, // blocks CSRF
-  maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in ms
-  path: '/api/auth', // cookie only sent to auth routes
+  httpOnly: true,
+  secure: process.env.NODE_ENV === 'production',
+  sameSite: 'strict' as const,
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+  path: '/api/auth',
+  domain:
+    process.env.NODE_ENV === 'production'
+      ? process.env.COOKIE_DOMAIN // e.g. 'api.yanatransit.in'
+      : undefined,
 };
 
 export function clearRefreshCookieOptions() {

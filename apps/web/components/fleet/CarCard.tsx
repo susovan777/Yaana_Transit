@@ -18,8 +18,8 @@ import { Car, BadgeStyle } from '@/lib/data/fleet';
 
 // ── Badge colour map ────────────────────────────────────────────────
 const badgeClasses: Record<BadgeStyle, string> = {
-  blue: 'bg-[#EBF2FF] text-[#2E6FD8] border border-[#DDEAFF]',
-  navy: 'bg-[#0B1F3A] text-white',
+  blue: 'bg-[#EBF2FF] text-[#3A6AB6] border border-[#DDEAFF]',
+  navy: 'bg-[#1C1F26] text-white',
   green: 'bg-emerald-50 text-emerald-700 border border-emerald-200',
 };
 
@@ -78,7 +78,7 @@ export default function CarCard({ car, priority = false }: CarCardProps) {
       <div className="flex flex-col flex-1 p-5">
         {/* Name + type */}
         <div className="mb-3">
-          <h3 className="text-[20px] font-bold text-[#0B1F3A] leading-snug">
+          <h3 className="text-[20px] font-bold text-[#1C1F26] leading-snug">
             {car.name}
           </h3>
           <p className="text-[11px] text-slate-500 uppercase tracking-[1px] mt-0.5">
@@ -114,7 +114,7 @@ export default function CarCard({ car, priority = false }: CarCardProps) {
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-[#EBF2FF] text-[#2E6FD8] text-[12px] font-semibold transition-all duration-200 hover:bg-[#2E6FD8] hover:text-white"
+            className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-[#EBF2FF] text-[#3A6AB6] text-[12px] font-semibold transition-all duration-200 hover:bg-[#3A6AB6] hover:text-white"
           >
             <WhatsAppIcon size={15} />
             Enquire
