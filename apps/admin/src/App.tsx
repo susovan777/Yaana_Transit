@@ -6,8 +6,9 @@ import { AppLayout } from './components/layout/AppLayout';
 import { LoginPage } from './pages/LoginPage';
 import { ActivatePage } from './pages/ActivatePage';
 import { DashboardPage } from './pages/DashboardPage';
+import { CompaniesPage } from './pages/CompaniesPage';
 import {
-  CompaniesPage,
+  // CompaniesPage,
   FleetPage,
   BookingsPage,
   InvoicesPage,
