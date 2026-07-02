@@ -9,6 +9,7 @@
 //
 // This pattern creates ONE client and reuses it. 
 
+import "dotenv/config";
 import { PrismaClient } from '@prisma/client';
 import { PrismaPg } from '@prisma/adapter-pg';
 
@@ -20,7 +21,10 @@ const globalForPrisma = globalThis as unknown as {
 const connectionString = process.env.DATABASE_URL!;
 
 // 2. Instantiate the Prisma Postgres adapter
-const adapter = new PrismaPg({ connectionString });
+const adapter = new PrismaPg({
+  connectionString,
+  ssl: { rejectUnauthorized: false },
+});
 
 export const prisma =
   globalForPrisma.prisma ??
