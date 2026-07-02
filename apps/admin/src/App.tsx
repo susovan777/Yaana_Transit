@@ -3,14 +3,16 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './store/auth.store';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import { AppLayout } from './components/layout/AppLayout';
+import { FleetPage } from './pages/FleetPage';
 import { LoginPage } from './pages/LoginPage';
 import { ActivatePage } from './pages/ActivatePage';
 import { DashboardPage } from './pages/DashboardPage';
 import { CompaniesPage } from './pages/CompaniesPage';
+import { BookingsPage } from './pages/BookingPage';
 import {
   // CompaniesPage,
-  FleetPage,
-  BookingsPage,
+  // FleetPage,
+  // BookingsPage,
   InvoicesPage,
   ReportsPage,
   UsersPage,
