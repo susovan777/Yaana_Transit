@@ -186,7 +186,7 @@ export const inviteUser = catchAsync(async (req: Request, res: Response) => {
   const { raw: rawToken, hashed: hashedToken } = generateSecureToken();
 
   // Create user + invitation token in a transaction
-  const user = await prisma.$transaction(async (tx) => {
+  const user = await prisma.$transaction<any>(async (tx) => {
     const newUser = await tx.user.create({
       data: {
         name: data.name,

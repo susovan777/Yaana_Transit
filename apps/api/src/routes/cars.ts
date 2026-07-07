@@ -37,13 +37,22 @@ router.get(
   '/',
   catchAsync(async (req: Request, res: Response) => {
     const query = vehiclesQuerySchema.parse(req.query);
-    const skip = (query.page - 1) * query.limit;
 
-    const where = {
+    // Ensure numbers are safely calculated
+    const page = Number(query.page) || 1;
+    const limit = Number(query.limit) || 10;
+    const skip = (page - 1) * limit;
+
+    const where: any = {
       isActive: true,
-      ...(query.category && { category: query.category }),
-      ...(query.cityId && { baseCityId: query.cityId }),
     };
+
+    if (query.category) {
+      where.category = query.category;
+    }
+    if (query.cityId) {
+      where.baseCityId = query.cityId;
+    }
 
     const [total, vehicles] = await Promise.all([
       prisma.vehicle.count({ where }),
