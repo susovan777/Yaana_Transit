@@ -8,7 +8,7 @@ import { CompanyStatus, UserStatus } from '@prisma/client';
 
 import prisma from '../lib/prisma';
 import { catchAsync, AppError } from '../middleware/errorHandler';
-import { sendInvitationEmail } from '@/services/email.service';
+import { sendInvitationEmail } from '../services/email.service';
 import { generateSecureToken, hashToken } from '../services/token.service';
 import type {
   CreateCompanyInput,
