@@ -21,7 +21,7 @@ import axios, { AxiosError, type InternalAxiosRequestConfig } from 'axios';
 const TOKEN_KEY = 'yaana_access_token';
 
 export const api = axios.create({
-  baseURL: '/',        // Vite proxy forwards /api/* to localhost:4000
+  baseURL: import.meta.env.VITE_API_URL ?? '/', // Vite proxy forwards /api/* to localhost:4000
   withCredentials: true, // send httpOnly cookie on every request
   headers: { 'Content-Type': 'application/json' },
 });

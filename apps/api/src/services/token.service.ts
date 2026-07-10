@@ -99,7 +99,7 @@ export const refreshCookieOptions = {
   path: '/api/auth',
   domain:
     process.env.NODE_ENV === 'production'
-      ? process.env.COOKIE_DOMAIN // e.g. 'api.yanatransit.in'
+      ? process.env.COOKIE_DOMAIN // e.g. '.yaanatransit.com'
       : undefined,
 };
 
