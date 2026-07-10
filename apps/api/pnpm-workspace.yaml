@@ -1,0 +1,7 @@
+# apps/api/pnpm-workspace.yaml
+allowBuilds:
+  '@prisma/engines': true
+  'esbuild': true
+  'prisma': true
+  'sharp': true
+  'unrs-resolver': true
