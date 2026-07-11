@@ -436,7 +436,7 @@ export function DashboardPage() {
               </tr>
             </thead>
             <tbody>
-              {recentBookings.map((booking, idx) => {
+              {recentBookings.map((booking) => {
                 const cfg =
                   STATUS_CONFIG[booking.status] ?? STATUS_CONFIG['ENQUIRY'];
                 const Icon = cfg.icon;

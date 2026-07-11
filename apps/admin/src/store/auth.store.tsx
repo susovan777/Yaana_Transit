@@ -66,7 +66,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         const { accessToken } = res.data.data;
 
         // Decode user info from the token payload (middle segment, base64)
-        const payload = JSON.parse(atob(accessToken.split('.')[1]));
+        // const payload = JSON.parse(atob(accessToken.split('.')[1]));
 
         // Fetch full user profile using the new access token
         const profileRes = await api.get<{ data: AuthUser }>('/api/auth/me', {

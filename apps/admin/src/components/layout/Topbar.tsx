@@ -1,5 +1,4 @@
 // Path: apps/admin/src/components/layout/Topbar.tsx
-import { useLocation } from 'react-router-dom';
 import {
   Bell,
   Building2,
@@ -9,16 +8,6 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../../store/auth.store';
 
-const PAGE_TITLES: Record<string, string> = {
-  '/dashboard': 'Dashboard',
-  '/companies': 'Companies',
-  '/fleet': 'Fleet',
-  '/bookings': 'Bookings',
-  '/invoices': 'Invoices',
-  '/reports': 'Reports',
-  '/users': 'Users',
-};
-
 type TopbarProps = {
   onMenuClick: () => void;
   sidebarCollapsed: boolean;
@@ -26,9 +15,6 @@ type TopbarProps = {
 
 export function Topbar({ onMenuClick, sidebarCollapsed }: TopbarProps) {
   const { user } = useAuth();
-  const { pathname } = useLocation();
-
-  const title = PAGE_TITLES[pathname] ?? 'Yana Transit';
   const isCorporateUser = user?.role !== 'YAANA_ADMIN';
   const isMobile = window.innerWidth < 768;
 
@@ -54,15 +40,9 @@ export function Topbar({ onMenuClick, sidebarCollapsed }: TopbarProps) {
           )}
         </button>
 
-        {/* <h1
-          className="text-[16px] md:text-[17px] font-semibold text-[#1C1F26]"
-          style={{ fontFamily: 'Poppins, sans-serif' }}
-        >
-          Yaana Transit
-        </h1> */}
         <div>
           <p
-            className="text-[#1C1F26] font-semibold text-[15px] leading-tight"
+            className="text-[#1C1F26] font-semibold text-[17px] leading-tight"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
             Yana Transit
