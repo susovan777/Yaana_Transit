@@ -301,7 +301,7 @@ export const updateUserStatus = catchAsync(
     // Cannot deactivate another YAANA_ADMIN via this endpoint
     if (user.role === 'YAANA_ADMIN') {
       throw new AppError(
-        'Cannot modify Yana Admin accounts via this endpoint.',
+        'Cannot modify YaanaAdmin accounts via this endpoint.',
         403
       );
     }
@@ -362,7 +362,7 @@ export const resendInvite = catchAsync(async (req: Request, res: Response) => {
     toEmail: user.email,
     toName: user.name,
     companyName: user.company?.name ?? 'Your Company',
-    invitedByName: 'Yana Transit Team',
+    invitedByName: 'Yaana Transit Team',
     activationToken: rawToken,
   });
 

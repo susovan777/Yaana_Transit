@@ -14,9 +14,13 @@ export const SITE = {
   phone: '+91 98765 43210',
   phoneRaw: '919876543210',
   email: 'hello@yaanatransit.in',
-  // Address will be updated once Bengaluru HO address is confirmed
-  address: 'Bengaluru, Karnataka, India',
+  address: `Site no. 32 & 33, K.No. 119, 
+            Green Cliff Builders & Developers Layout,
+            Mahadevakodigehalli,
+            Bengaluru, Karnataka, India, 562149`,
   whatsappBase: 'https://wa.me/919876543210',
+  gstNumber: '29FCMPK3672M1ZR',
+  pan: '',
 } as const;
 
 export const WA_MESSAGES = {
@@ -136,8 +140,10 @@ export const FOOTER_CONTACT: ContactItem[] = [
   {
     icon: '📍',
     label: 'Head Office',
-    // Update once Bengaluru address is confirmed
-    value: 'Bengaluru, Karnataka, India',
+    value: `Site no. 32 & 33, K.No. 119, 
+            Green Cliff Builders & Developers Layout,
+            Mahadevakodigehalli, Bengaluru, 
+            Karnataka, 562149`,
     href: '#',
   },
 ];

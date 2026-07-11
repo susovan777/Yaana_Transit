@@ -9,7 +9,7 @@
 //   router.get('/bookings', authenticate, authorize('YAANA_ADMIN', 'CORPORATE_ADMIN'), getBookings);
 //
 // The Role enum values from Prisma:
-//   YAANA_ADMIN      → Yana internal staff (full access)
+//   YAANA_ADMIN      → Yaanainternal staff (full access)
 //   CORPORATE_ADMIN  → Client company admin (scoped to their company)
 //   CORPORATE_USER   → Client employee (scoped to their bookings only)
 

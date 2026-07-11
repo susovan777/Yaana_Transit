@@ -228,7 +228,7 @@ export function DashboardPage() {
           Good {getGreeting()} 👋
         </h2>
         <p className="text-sm text-[#6B7A90] mt-0.5">
-          Here's what's happening at Yana Transit today.
+          Here's what's happening at Yaana Transit today.
         </p>
       </div>
 

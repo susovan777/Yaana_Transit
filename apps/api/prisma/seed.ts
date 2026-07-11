@@ -203,13 +203,13 @@ async function main() {
   }
 
   // ── 2. YAANA_ADMIN ─────────────────────────────────────────────────
-  console.log('\n👤  Seeding Yana Admin...');
+  console.log('\n👤  Seeding YaanaAdmin...');
   const adminHash = await bcrypt.hash('Admin@1234', 12);
   const admin = await prisma.user.upsert({
     where: { email: 'admin@yanatransit.in' },
     update: { passwordHash: adminHash, status: UserStatus.ACTIVE },
     create: {
-      name: 'Yana Admin',
+      name: 'YaanaAdmin',
       email: 'admin@yanatransit.in',
       passwordHash: adminHash,
       role: Role.YAANA_ADMIN,
@@ -790,12 +790,12 @@ main()
 
 // ─── Seed Output ─────────────────────────────────────────────────
 
-//   🌱  Starting Yana Transit database seed...
+//   🌱  Starting Yaana Transit database seed...
 
 // 📍  Seeding cities...
 //     ✓ 8 cities seeded
 
-//     👤  Seeding Yana Admin user...
+//     👤  Seeding YaanaAdmin user...
 //     ✓ Admin: admin@yanatransit.in  |  Password: Admin@1234
 
 // 🏢  Seeding test company...

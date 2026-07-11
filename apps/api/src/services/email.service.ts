@@ -34,7 +34,7 @@ function getResend(): Resend {
 // Production:  set RESEND_FROM_EMAIL=noreply@yanatransit.in in env
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev';
 
-const APP_NAME = 'Yana Transit';
+const APP_NAME = 'Yaana Transit';
 const APP_URL = process.env.APP_URL ?? 'http://localhost:5173'; // admin panel URL
 
 // ── Email: Invitation ─────────────────────────────────────────────────
@@ -119,7 +119,7 @@ function buildInvitationHtml(p: InvitationHtmlParams): string {
         <tr>
           <td style="background:#1C1F26;padding:28px 40px;">
             <p style="margin:0;font-size:22px;font-weight:700;color:#ffffff;letter-spacing:0.5px;">
-              Yana Transit
+              Yaana Transit
             </p>
             <p style="margin:4px 0 0;font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;">
               Driven by Trust
@@ -135,7 +135,7 @@ function buildInvitationHtml(p: InvitationHtmlParams): string {
             </p>
             <p style="margin:0 0 24px;font-size:15px;color:#6B7A90;line-height:1.6;">
               <strong>${p.invitedByName}</strong> has invited you to join the
-              <strong>${p.companyName}</strong> account on Yana Transit's corporate portal.
+              <strong>${p.companyName}</strong> account on Yaana Transit's corporate portal.
             </p>
 
             <p style="margin:0 0 12px;font-size:14px;color:#6B7A90;">
@@ -197,7 +197,7 @@ function buildPasswordResetHtml(p: PasswordResetHtmlParams): string {
         <!-- Header -->
         <tr>
           <td style="background:#1C1F26;padding:28px 40px;">
-            <p style="margin:0;font-size:22px;font-weight:700;color:#ffffff;">Yana Transit</p>
+            <p style="margin:0;font-size:22px;font-weight:700;color:#ffffff;">Yaana Transit</p>
             <p style="margin:4px 0 0;font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;">Driven by Trust</p>
           </td>
         </tr>
@@ -211,7 +211,7 @@ function buildPasswordResetHtml(p: PasswordResetHtmlParams): string {
             <p style="margin:0 0 24px;font-size:15px;color:#6B7A90;line-height:1.6;">
               Hi ${
                 p.toName
-              }, we received a request to reset your Yana Transit password.
+              }, we received a request to reset your Yaana Transit password.
               Click below to choose a new one. This link expires in <strong>1 hour</strong>.
             </p>
 
@@ -238,7 +238,7 @@ function buildPasswordResetHtml(p: PasswordResetHtmlParams): string {
         <tr>
           <td style="padding:20px 40px;border-top:1px solid #EDF2F7;">
             <p style="margin:0;font-size:12px;color:#A0AEC0;">
-              © ${new Date().getFullYear()} Yana Transit Pvt. Ltd. · Mumbai, India
+              © ${new Date().getFullYear()} Yaana Transit Pvt. Ltd. · Mumbai, India
             </p>
           </td>
         </tr>

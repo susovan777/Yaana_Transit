@@ -94,7 +94,7 @@ export function Sidebar({
             <img
               // Update the src to toggle based on isExpanded
               src={isExpanded ? '/logo.png' : '/logo-sm.png'}
-              alt="Yana Transit"
+              alt="Yaana Transit"
               className="h-14 w-auto shrink-0 object-contain"
               onError={(e) => {
                 // Fallback to icon if logo is not found
@@ -248,7 +248,7 @@ export function Sidebar({
                   style={{ color: TEXT_MUTED }}
                 >
                   {user?.role === 'YAANA_ADMIN'
-                    ? 'Yana Admin'
+                    ? 'YaanaAdmin'
                     : user?.role === 'CORPORATE_ADMIN'
                     ? 'Corp. Admin'
                     : 'User'}

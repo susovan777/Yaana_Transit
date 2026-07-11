@@ -73,7 +73,7 @@ export function LoginPage() {
             <span className="text-[#6B96D4]">effortlessly.</span>
           </h2>
           <p className="text-white/45 text-sm leading-relaxed max-w-xs">
-            The operations hub for Yana Transit — bookings, invoices, fleet and
+            The operations hub for Yaana Transit — bookings, invoices, fleet and
             corporate client management in one place.
           </p>
         </div>

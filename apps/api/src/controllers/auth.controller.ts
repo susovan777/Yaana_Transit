@@ -65,7 +65,7 @@ export const login = catchAsync(async (req: Request, res: Response) => {
   // 3. Company status check (for corporate users)
   if (user.company && user.company.status === 'INACTIVE') {
     throw new AppError(
-      'Your company account is inactive. Please contact Yana Transit support.',
+      'Your company account is inactive. Please contact Yaana Transit support.',
       403
     );
   }
@@ -297,7 +297,7 @@ export const forgotPassword = catchAsync(
     if (!user || user.status !== UserStatus.ACTIVE) {
       // Send the response, then return void to exit early
       res.status(200).json(successResponse);
-      return; 
+      return;
     }
 
     const { raw, hashed } = generateSecureToken();

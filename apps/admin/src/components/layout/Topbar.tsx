@@ -45,7 +45,7 @@ export function Topbar({ onMenuClick, sidebarCollapsed }: TopbarProps) {
             className="text-[#1C1F26] font-semibold text-[17px] leading-tight"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
-            Yana Transit
+            Yaana Transit
           </p>
           <p className="text-gray-500 text-[10px] tracking-[1.5px] uppercase font-medium">
             Admin Panel
@@ -65,7 +65,7 @@ export function Topbar({ onMenuClick, sidebarCollapsed }: TopbarProps) {
       <div className="flex items-center gap-2">
         {user?.role === 'YAANA_ADMIN' && (
           <span className="hidden sm:block px-2.5 py-1 rounded-full bg-[#1C1F26] text-[10px] font-bold text-white tracking-[1px] uppercase">
-            Yana Admin
+            YaanaAdmin
           </span>
         )}
         <button

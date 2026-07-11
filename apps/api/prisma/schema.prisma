@@ -18,7 +18,7 @@
 //   • Audit timestamps (createdAt, updatedAt) on every table
 //
 // ROLES:
-//   YAANA_ADMIN      → Full system access (Yana internal staff)
+//   YAANA_ADMIN      → Full system access (Yaanainternal staff)
 //   CORPORATE_ADMIN  → Manages their own company's users & bookings
 //   CORPORATE_USER   → Creates/views their own bookings only
 //
@@ -42,7 +42,7 @@ datasource db {
 // ─────────────────────────────────────────
 
 enum Role {
-  YAANA_ADMIN // Yana internal — full access
+  YAANA_ADMIN // Yaanainternal — full access
   CORPORATE_ADMIN // Client company admin — manages their company
   CORPORATE_USER // Client company employee — limited access
 }
@@ -60,7 +60,7 @@ enum CompanyStatus {
 
 enum BookingStatus {
   ENQUIRY // Initial request, no vehicle assigned yet
-  CONFIRMED // Yana confirmed, vehicle assigned
+  CONFIRMED // Yaanaconfirmed, vehicle assigned
   ONGOING // Trip in progress
   COMPLETED // Trip done
   CANCELLED // Cancelled by either party
@@ -249,8 +249,8 @@ model Vehicle {
 
 // ─────────────────────────────────────────
 // CITY
-// Cities where Yana Transit operates.
-// hasOffice = true means Yana has a physical presence.
+// Cities where Yaana Transit operates.
+// hasOffice = true means Yaanahas a physical presence.
 // ─────────────────────────────────────────
 
 model City {

@@ -112,11 +112,13 @@ export default function Footer() {
   return (
     <footer className="bg-navy text-white">
       {/* ── Top grid ── */}
-      <div className="max-w-[1280px] mx-auto px-6 md:px-10 xl:px-14 pt-16 pb-14">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-10 xl:px-14 pt-16 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_1.2fr] gap-12 pb-6 border-b border-white/10">
           {/* Brand column */}
           <div>
-            <Logo src="/logo.png" width="w-[200px]" height="h-[200px]" />
+            <Logo src="/logo.png" width="w-[200px]" height="h-[100px]" />
+
+            <p className="mt-2 mb-5 text-[14px] text-white/45">GSTIN: {SITE.gstNumber}</p>
 
             {/* Tagline */}
             {/* <p
