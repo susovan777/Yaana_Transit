@@ -35,15 +35,31 @@ function FooterColumn({
       <h4 className="text-[11px] font-bold tracking-[2px] uppercase text-white/40 mb-5">
         {heading}
       </h4>
+
       <ul className="flex flex-col gap-3">
         {links.map((link) => (
           <li key={link.label}>
-            <Link
-              href={link.href}
-              className="text-[14px] text-white/60 hover:text-white transition-colors duration-200"
-            >
-              {link.label}
-            </Link>
+            {link.href.startsWith('https://admin') ? (
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-white/40 hover:text-white/80 transition-colors flex items-center gap-1.5"
+              >
+                {link.label}
+                <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-white/50 font-medium tracking-wide">
+                  Portal
+                </span>
+              </a>
+            ) : (
+              // existing link rendering
+              <Link
+                href={link.href}
+                className="text-[14px] text-white/60 hover:text-white transition-colors duration-200"
+              >
+                {link.label}
+              </Link>
+            )}
           </li>
         ))}
       </ul>
@@ -100,7 +116,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_1.2fr] gap-12 pb-6 border-b border-white/10">
           {/* Brand column */}
           <div>
-            <Logo src="/logo.png" width='w-[200px]' height='h-[200px]' />
+            <Logo src="/logo.png" width="w-[200px]" height="h-[200px]" />
 
             {/* Tagline */}
             {/* <p
@@ -114,8 +130,6 @@ export default function Footer() {
             <p className="mt-0 text-[14px] leading-[1.75] text-white/50 mb-6 max-w-[320px]">
               {SITE.description}
             </p>
-
-            
           </div>
 
           {/* Data columns */}
@@ -138,7 +152,11 @@ export default function Footer() {
                   <Link
                     href={item.href}
                     target={item.href.startsWith('http') ? '_blank' : undefined}
-                    rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    rel={
+                      item.href.startsWith('http')
+                        ? 'noopener noreferrer'
+                        : undefined
+                    }
                     className="group flex items-start gap-2.5 text-[14px] text-white/60 hover:text-white transition-colors duration-200"
                   >
                     <span className="mt-px shrink-0">{item.icon}</span>

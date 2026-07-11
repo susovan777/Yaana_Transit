@@ -240,7 +240,7 @@ export default function WhyPage() {
                       className="text-[48px] font-bold text-[#1C1F26] leading-none"
                       style={{ fontFamily: 'var(--font-display)' }}
                     >
-                      18%
+                      5%
                     </p>
                     <p className="text-[12px] text-slate-500 mt-1">
                       SAC Code 996411 — Compliant invoices on every trip

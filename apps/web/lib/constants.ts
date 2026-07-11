@@ -86,6 +86,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       { label: 'Privacy Policy', href: '/privacy' },
       { label: 'Terms of Service', href: '/terms' },
       { label: 'Cancellation Policy', href: '/cancellation' },
+      { label: 'Client Login', href: 'https://admin.yaanatransit.com' },
     ],
   },
 ];
