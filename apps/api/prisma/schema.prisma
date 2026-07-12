@@ -350,7 +350,7 @@ model Invoice {
   sacCode    String  @default("996411") // Road transport services
   gstType    String? // "CGST_SGST" or "IGST"
   companyGst String? // Company's GST number at time of invoice
-  yanaGst    String? // Yana's GST number
+  yaanaGst   String? // Yaana's GST number
 
   // Dates
   issueDate DateTime  @default(now())

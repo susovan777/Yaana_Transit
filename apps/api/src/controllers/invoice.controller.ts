@@ -23,7 +23,7 @@ const INVOICE_SELECT = {
   sacCode: true,
   gstType: true,
   companyGst: true,
-  yanaGst: true,
+  yaanaGst: true,
   issueDate: true,
   dueDate: true,
   paidAt: true,
@@ -232,7 +232,7 @@ function buildPdfData(
     issueDate: invoice.issueDate,
     dueDate: invoice.dueDate,
     status: invoice.status,
-    yanaGst: invoice.yanaGst,
+    yaanaGst: invoice.yaanaGst,
     companyName: invoice.company.name,
     companyGst: invoice.company.gstNumber,
     companyAddress: invoice.company.address,
@@ -271,7 +271,7 @@ async function getInvoiceForPdf(id: string) {
       total: true,
       sacCode: true,
       gstType: true,
-      yanaGst: true,
+      yaanaGst: true,
       notes: true,
       company: {
         select: {

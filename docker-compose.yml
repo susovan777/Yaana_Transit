@@ -15,18 +15,18 @@ services:
   # ── PostgreSQL ─────────────────────────────────────────────────────
   postgres:
     image: postgres:16-alpine # lightweight Alpine Linux variant
-    container_name: yana_postgres
+    container_name: yaana_postgres
     restart: unless-stopped
     environment:
-      POSTGRES_USER: yana_user
-      POSTGRES_PASSWORD: yana_password
-      POSTGRES_DB: yana_transit
+      POSTGRES_USER: yaana_user
+      POSTGRES_PASSWORD: yaana_password
+      POSTGRES_DB: yaana_transit
     ports:
       - '5432:5432' # host:container — access via localhost:5432
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -U yana_user -d yana_transit']
+      test: ['CMD-SHELL', 'pg_isready -U yaana_user -d yaana_transit']
       interval: 10s
       timeout: 5s
       retries: 5

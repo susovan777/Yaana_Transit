@@ -15,8 +15,8 @@ export type InvoicePdfData = {
   dueDate: Date | null;
   status: string;
 
-  // Yana Transit's own details (constant across invoices)
-  yanaGst: string | null;
+  // Yaana Transit's own details (constant across invoices)
+  yaanaGst: string | null;
 
   // Company being billed
   companyName: string;
@@ -53,10 +53,10 @@ const MUTED = '#6B7A90';
 const LIGHT_BG = '#F7F9FC';
 const BORDER = '#E2E8F2';
 
-const YANA_DETAILS = {
+const YAANA_DETAILS = {
   name: 'Yaana Transit Pvt. Ltd.',
   address: 'Bengaluru, Karnataka, India',
-  email: 'accounts@yanatransit.in',
+  email: 'accounts@yaanatransit.com',
   phone: '+91 98765 43210',
 };
 
@@ -108,15 +108,15 @@ export function generateInvoicePdf(data: InvoicePdfData): Promise<Buffer> {
         .fillColor('#FFFFFF')
         .fontSize(20)
         .font('Helvetica-Bold')
-        .text('YANA TRANSIT', 50, 35);
+        .text('YAANA TRANSIT', 50, 35);
 
       doc
         .fontSize(9)
         .font('Helvetica')
         .fillColor('#B8C5DB')
         .text('Driven by Trust', 50, 58)
-        .text(YANA_DETAILS.address, 50, 72)
-        .text(`${YANA_DETAILS.email}  •  ${YANA_DETAILS.phone}`, 50, 84);
+        .text(YAANA_DETAILS.address, 50, 72)
+        .text(`${YAANA_DETAILS.email}  •  ${YAANA_DETAILS.phone}`, 50, 84);
 
       // Invoice label top-right
       doc
@@ -350,7 +350,7 @@ export function generateInvoicePdf(data: InvoicePdfData): Promise<Buffer> {
         .fontSize(8)
         .fillColor(MUTED)
         .text(
-          `${YANA_DETAILS.name}  •  ${YANA_DETAILS.email}  •  ${YANA_DETAILS.phone}`,
+          `${YAANA_DETAILS.name}  •  ${YAANA_DETAILS.email}  •  ${YAANA_DETAILS.phone}`,
           50,
           footerY + 28,
           { width: pageWidth, align: 'center' }

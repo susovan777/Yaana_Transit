@@ -206,11 +206,11 @@ async function main() {
   console.log('\n👤  Seeding YaanaAdmin...');
   const adminHash = await bcrypt.hash('Admin@1234', 12);
   const admin = await prisma.user.upsert({
-    where: { email: 'admin@yanatransit.in' },
+    where: { email: 'admin@yaanatransit.com' },
     update: { passwordHash: adminHash, status: UserStatus.ACTIVE },
     create: {
       name: 'YaanaAdmin',
-      email: 'admin@yanatransit.in',
+      email: 'admin@yaanatransit.com',
       passwordHash: adminHash,
       role: Role.YAANA_ADMIN,
       status: UserStatus.ACTIVE,
@@ -764,7 +764,7 @@ async function main() {
 
   console.log('\n✅  Seed complete!\n');
   console.log('─────────────────────────────────────────────────');
-  console.log(`  YAANA_ADMIN    admin@yanatransit.in  / Admin@1234`);
+  console.log(`  YAANA_ADMIN    admin@yaanatransit.com  / Admin@1234`);
   console.log(`  CORP_ADMIN[0]  rajesh@acme.in        / Corp@1234`);
   console.log(`  CORP_ADMIN[1]  amit@infosync.in      / Corp@1234`);
   console.log(`  CORP_ADMIN[2]  vivek@horizoncap.in   / Corp@1234`);
@@ -796,7 +796,7 @@ main()
 //     ✓ 8 cities seeded
 
 //     👤  Seeding YaanaAdmin user...
-//     ✓ Admin: admin@yanatransit.in  |  Password: Admin@1234
+//     ✓ Admin: admin@yaanatransit.com  |  Password: Admin@1234
 
 // 🏢  Seeding test company...
 //     ✓ Company: Infosys Limited (id: seed-company-infosys)
@@ -814,7 +814,7 @@ main()
 // ✅  Seed complete!
 
 // 🔑  Login credentials (ready to use):
-//     Email    : admin@yanatransit.in
+//     Email    : admin@yaanatransit.com
 //     Password : Admin@1234
 //     Role     : YAANA_ADMIN
 

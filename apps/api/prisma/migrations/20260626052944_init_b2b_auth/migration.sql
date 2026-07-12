@@ -166,7 +166,7 @@ CREATE TABLE "invoices" (
     "sacCode" TEXT NOT NULL DEFAULT '996411',
     "gstType" TEXT,
     "companyGst" TEXT,
-    "yanaGst" TEXT,
+    "yaanaGst" TEXT,
     "issueDate" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "dueDate" TIMESTAMP(3),
     "paidAt" TIMESTAMP(3),

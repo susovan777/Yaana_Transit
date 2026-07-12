@@ -13,7 +13,7 @@ export const SITE = {
     'Corporate car rentals across 50+ cities in India. Chauffeur-driven, employee transportation, and dedicated corporate fleet — all with transparent service and verified chauffeurs.',
   phone: '+91 98765 43210',
   phoneRaw: '919876543210',
-  email: 'hello@yaanatransit.in',
+  email: 'hello@yaanatransit.com',
   address: `Site no. 32 & 33, K.No. 119, 
             Green Cliff Builders & Developers Layout,
             Mahadevakodigehalli,
@@ -128,8 +128,8 @@ export const FOOTER_CONTACT: ContactItem[] = [
   {
     icon: '✉️',
     label: 'Email',
-    value: 'hello@yaanatransit.in',
-    href: 'mailto:hello@yaanatransit.in',
+    value: 'hello@yaanatransit.com',
+    href: 'mailto:hello@yaanatransit.com',
   },
   {
     icon: '💬',

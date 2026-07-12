@@ -5,7 +5,7 @@
 // Resend is a developer-first email API. No SMTP config,
 // just an API key. Free tier: 3,000 emails/month.
 // Production: Add your domain at resend.com/domains for
-// emails to come from hello@yanatransit.in instead of
+// emails to come from hello@yaanatransit.com instead of
 // the default onboarding@resend.dev
 //
 // Setup:
@@ -31,7 +31,7 @@ function getResend(): Resend {
 // ── Config ────────────────────────────────────────────────────────────
 
 // Development: use Resend's test address (no domain needed)
-// Production:  set RESEND_FROM_EMAIL=noreply@yanatransit.in in env
+// Production:  set RESEND_FROM_EMAIL=noreply@yaanatransit.com in env
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev';
 
 const APP_NAME = 'Yaana Transit';
@@ -285,7 +285,7 @@ export async function sendInvoiceEmail(
   await getResend().emails.send({
     from: `${APP_NAME} Billing <${FROM_EMAIL}>`,
     to: toEmail,
-    subject: `Invoice ${invoiceNumber} from Yana Transit`,
+    subject: `Invoice ${invoiceNumber} from Yaana Transit`,
     html: buildInvoiceEmailHtml({
       companyName,
       invoiceNumber,
@@ -319,7 +319,7 @@ function buildInvoiceEmailHtml(p: InvoiceEmailHtmlParams): string {
       <table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.08);">
         <tr>
           <td style="background:#0B1F3A;padding:28px 40px;">
-            <p style="margin:0;font-size:22px;font-weight:700;color:#ffffff;">Yana Transit</p>
+            <p style="margin:0;font-size:22px;font-weight:700;color:#ffffff;">Yaana Transit</p>
             <p style="margin:4px 0 0;font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;">Driven by Trust</p>
           </td>
         </tr>
@@ -331,7 +331,7 @@ function buildInvoiceEmailHtml(p: InvoiceEmailHtmlParams): string {
             <p style="margin:0 0 24px;font-size:15px;color:#6B7A90;line-height:1.6;">
               Dear ${
                 p.companyName
-              } team, please find attached your invoice from Yana Transit.
+              } team, please find attached your invoice from Yaana Transit.
             </p>
             <table cellpadding="0" cellspacing="0" width="100%" style="background:#F7F9FC;border-radius:10px;margin-bottom:24px;">
               <tr>
@@ -356,7 +356,7 @@ function buildInvoiceEmailHtml(p: InvoiceEmailHtmlParams): string {
         </tr>
         <tr>
           <td style="padding:20px 40px;border-top:1px solid #EDF2F7;">
-            <p style="margin:0;font-size:12px;color:#A0AEC0;">© ${new Date().getFullYear()} Yana Transit Pvt. Ltd. · Mumbai, India</p>
+            <p style="margin:0;font-size:12px;color:#A0AEC0;">© ${new Date().getFullYear()} Yaana Transit Pvt. Ltd. · Mumbai, India</p>
           </td>
         </tr>
       </table>
