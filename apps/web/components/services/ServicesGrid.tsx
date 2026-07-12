@@ -1,14 +1,11 @@
-// Path: apps\web\components\services\ServicesGrid.tsx
+// Path: apps/web/components/services/ServicesGrid.tsx
 
 'use client';
 
-// Animated 3-column grid of service cards.
-// "use client" because of whileInView + whileHover.
-//
-// Design reference: demo3.html .svc-card pattern —
-// border highlight on hover with top blue line,
-// icon bg shifts to navy, "Book now →" CTA.
+// Animated 3-column grid of service cards for /services page.
+// "use client" — needed for whileInView + whileHover.
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -19,7 +16,7 @@ interface ServicesGridProps {
   services: Service[];
 }
 
-// Stagger the cards as they scroll into view
+// ── Animation variants ────────────────────────────────────────────────
 const containerVariants = {
   hidden: {},
   show: {
@@ -36,6 +33,7 @@ const cardVariants = {
   },
 };
 
+// ── Component ────────────────────────────────────────────────────────
 export default function ServicesGrid({ services }: ServicesGridProps) {
   return (
     <motion.div
@@ -54,41 +52,69 @@ export default function ServicesGrid({ services }: ServicesGridProps) {
             variants={cardVariants}
             whileHover={{ y: -5 }}
             transition={{ type: 'spring', stiffness: 300, damping: 24 }}
-            className="group relative flex flex-col bg-white rounded-2xl border-[1.5px] border-slate-200 p-7 hover:border-[#3A6AB6] hover:shadow-xl hover:shadow-[#3A6AB6]/8 transition-shadow duration-300 overflow-hidden"
+            className="group relative flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#C5D9F5] transition-shadow duration-300"
           >
-            {/* Top accent line — slides in on hover */}
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#3A6AB6] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
+            {/* ── Image area ─────────────────────────────────────── */}
+            <div className="relative h-[210px] overflow-hidden shrink-0 bg-slate-100">
+              <Image
+                src={`/images/services/${service.id}.jpg`}
+                alt={service.name}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              />
 
-            {/* Icon */}
-            <div className="w-12 h-12 rounded-xl bg-slate-100 group-hover:bg-[#1C1F26] flex items-center justify-center text-2xl transition-colors duration-300 mb-5 shrink-0">
-              {service.icon}
+              {/* Bottom gradient — softens image-to-card-body transition */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background:
+                    'linear-gradient(to bottom, transparent 50%, rgba(255,255,255,0.15) 100%)',
+                }}
+              />
+
+              {/* Top accent line — slides in on hover */}
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#3A6AB6] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
+
+              {/* Icon badge — bottom-left corner of image */}
+              {/* <div className="absolute bottom-3 left-4">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/90 backdrop-blur-sm shadow-sm text-[20px]">
+                  {service.icon}
+                </span>
+              </div> */}
             </div>
 
-            {/* Name */}
-            <h3 className="font-poppins text-lg font-semibold text-[#1C1F26] mb-2">
-              {service.name}
-            </h3>
-
-            {/* Description */}
-            <p className="text-sm text-slate-500 leading-relaxed mb-4 flex-1">
-              {service.description}
-            </p>
-
-            {/* Footer: B2B — no pricing */}
-            <div className="flex items-center justify-between pt-4 border-t border-line mt-auto">
-              <span className="text-[12px] text-slate-400 italic">
-                {/* Corporate pricing on request */}
-              </span>
-
-              <Link
-                href={waUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#3A6AB6] hover:gap-2.5 transition-all duration-200 group/cta"
+            {/* ── Card body ───────────────────────────────────────── */}
+            <div className="flex flex-col flex-1 p-6">
+              {/* Name */}
+              <h3
+                className="text-[18px] font-bold text-[#1C1F26] mb-2 leading-snug"
+                style={{ fontFamily: 'var(--font-display)' }}
               >
-                Enquire
-                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover/cta:translate-x-1" />
-              </Link>
+                {service.name}
+              </h3>
+
+              {/* Description */}
+              <p className="text-[13px] text-slate-500 leading-relaxed flex-1 mb-5">
+                {service.description}
+              </p>
+
+              {/* Footer */}
+              <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                <span className="text-[11px] text-slate-400 italic">
+                  Corporate pricing on request
+                </span>
+
+                <Link
+                  href={waUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[13px] font-semibold text-[#3A6AB6] hover:gap-1.5 transition-all duration-200 group/cta"
+                >
+                  Enquire
+                  <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover/cta:translate-x-1" />
+                </Link>
+              </div>
             </div>
           </motion.div>
         );
