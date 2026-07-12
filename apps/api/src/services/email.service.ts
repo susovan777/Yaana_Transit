@@ -249,3 +249,119 @@ function buildPasswordResetHtml(p: PasswordResetHtmlParams): string {
 </body>
 </html>`;
 }
+
+// ── Email: Invoice ─────────────────────────────────────────────────────
+// Sends the generated invoice PDF as an email attachment to the company.
+
+type SendInvoiceEmailParams = {
+  toEmail: string;
+  companyName: string;
+  invoiceNumber: string;
+  total: number;
+  dueDate: Date | null;
+  pdfBuffer: Buffer;
+};
+
+export async function sendInvoiceEmail(
+  params: SendInvoiceEmailParams
+): Promise<void> {
+  const { toEmail, companyName, invoiceNumber, total, dueDate, pdfBuffer } =
+    params;
+
+  const formattedTotal = new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: 0,
+  }).format(total);
+
+  const formattedDue = dueDate
+    ? new Intl.DateTimeFormat('en-IN', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+      }).format(dueDate)
+    : null;
+
+  await getResend().emails.send({
+    from: `${APP_NAME} Billing <${FROM_EMAIL}>`,
+    to: toEmail,
+    subject: `Invoice ${invoiceNumber} from Yana Transit`,
+    html: buildInvoiceEmailHtml({
+      companyName,
+      invoiceNumber,
+      formattedTotal,
+      formattedDue,
+    }),
+    attachments: [
+      {
+        filename: `${invoiceNumber}.pdf`,
+        content: pdfBuffer.toString('base64'),
+      },
+    ],
+  });
+}
+
+type InvoiceEmailHtmlParams = {
+  companyName: string;
+  invoiceNumber: string;
+  formattedTotal: string;
+  formattedDue: string | null;
+};
+
+function buildInvoiceEmailHtml(p: InvoiceEmailHtmlParams): string {
+  return `
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"></head>
+<body style="margin:0;padding:0;background:#f4f6f9;font-family:'Segoe UI',Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f6f9;padding:40px 0;">
+    <tr><td align="center">
+      <table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.08);">
+        <tr>
+          <td style="background:#0B1F3A;padding:28px 40px;">
+            <p style="margin:0;font-size:22px;font-weight:700;color:#ffffff;">Yana Transit</p>
+            <p style="margin:4px 0 0;font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;">Driven by Trust</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:40px;">
+            <p style="margin:0 0 8px;font-size:22px;font-weight:600;color:#0B1F3A;">Invoice ${
+              p.invoiceNumber
+            }</p>
+            <p style="margin:0 0 24px;font-size:15px;color:#6B7A90;line-height:1.6;">
+              Dear ${
+                p.companyName
+              } team, please find attached your invoice from Yana Transit.
+            </p>
+            <table cellpadding="0" cellspacing="0" width="100%" style="background:#F7F9FC;border-radius:10px;margin-bottom:24px;">
+              <tr>
+                <td style="padding:18px 22px;">
+                  <p style="margin:0 0 4px;font-size:11px;color:#A0AEC0;text-transform:uppercase;letter-spacing:1px;">Amount Due</p>
+                  <p style="margin:0;font-size:26px;font-weight:700;color:#3A6AB6;">${
+                    p.formattedTotal
+                  }</p>
+                  ${
+                    p.formattedDue
+                      ? `<p style="margin:8px 0 0;font-size:12px;color:#6B7A90;">Due by ${p.formattedDue}</p>`
+                      : ''
+                  }
+                </td>
+              </tr>
+            </table>
+            <p style="margin:0;font-size:13px;color:#A0AEC0;line-height:1.6;">
+              The full invoice with GST breakdown is attached as a PDF. For any billing queries, reply to this email
+              or contact our accounts team.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:20px 40px;border-top:1px solid #EDF2F7;">
+            <p style="margin:0;font-size:12px;color:#A0AEC0;">© ${new Date().getFullYear()} Yana Transit Pvt. Ltd. · Mumbai, India</p>
+          </td>
+        </tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`;
+}

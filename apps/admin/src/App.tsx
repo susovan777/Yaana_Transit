@@ -9,11 +9,12 @@ import { ActivatePage } from './pages/ActivatePage';
 import { DashboardPage } from './pages/DashboardPage';
 import { CompaniesPage } from './pages/CompaniesPage';
 import { BookingsPage } from './pages/BookingPage';
+import { InvoicesPage } from './pages/InvoicePage';
 import {
   // CompaniesPage,
   // FleetPage,
   // BookingsPage,
-  InvoicesPage,
+  // InvoicesPage,
   ReportsPage,
   UsersPage,
 } from './pages/stubs';

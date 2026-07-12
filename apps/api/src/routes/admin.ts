@@ -20,7 +20,19 @@ import {
   updateBookingSchema,
   updateBookingStatusSchema,
 } from '../schemas/booking.schema';
+import {
+  updateInvoiceStatusSchema,
+  recordPaymentSchema,
+} from '../schemas/invoice.schema';
 
+import {
+  listInvoices,
+  getInvoice,
+  updateInvoiceStatus,
+  recordPayment,
+  downloadInvoicePdf,
+  sendInvoiceToCustomer,
+} from '../controllers/invoice.controller';
 import {
   createCompany,
   listCompanies,
@@ -51,16 +63,16 @@ import {
 const router: Router = Router();
 router.use(authenticate, authorize('YAANA_ADMIN'));
 
-// Dashboard
+// ── Dashboard ──────────────────────────────────────────────────────────
 router.get('/dashboard', getDashboard);
 
-// Companies
+// ── Companies ──────────────────────────────────────────────────────────
 router.post('/companies', validate(createCompanySchema), createCompany);
 router.get('/companies', listCompanies);
 router.get('/companies/:id', getCompany);
 router.patch('/companies/:id', validate(updateCompanySchema), updateCompany);
 
-// Users
+// ── Users ──────────────────────────────────────────────────────────────
 router.post('/users/invite', validate(inviteUserSchema), inviteUser);
 router.get('/users', listUsers);
 router.patch(
@@ -70,7 +82,7 @@ router.patch(
 );
 router.post('/users/:id/resend-invite', resendInvite);
 
-// Fleet
+// ── Fleet ───────────────────────────────────────────────────────────────
 router.get('/fleet', listVehicles);
 router.get('/fleet/:id', getVehicle);
 router.post('/fleet', validate(createVehicleSchema), createVehicle);
@@ -78,7 +90,7 @@ router.patch('/fleet/:id', validate(updateVehicleSchema), updateVehicle);
 router.patch('/fleet/:id/toggle', toggleVehicle);
 router.delete('/fleet/:id', deleteVehicle);
 
-// Bookings
+// ── Bookings ────────────────────────────────────────────────────────────
 router.get('/bookings', listBookings);
 router.get('/bookings/:id', getBooking);
 router.post('/bookings', validate(createBookingSchema), createBooking);
@@ -88,5 +100,21 @@ router.patch(
   validate(updateBookingStatusSchema),
   updateBookingStatus
 );
+
+// ── Invoices ──────────────────────────────────────────────────────────
+router.get('/invoices', listInvoices);
+router.get('/invoices/:id', getInvoice);
+router.patch(
+  '/invoices/:id/status',
+  validate(updateInvoiceStatusSchema),
+  updateInvoiceStatus
+);
+router.post(
+  '/invoices/:id/payments',
+  validate(recordPaymentSchema),
+  recordPayment
+);
+router.get('/invoices/:id/pdf', downloadInvoicePdf);
+router.post('/invoices/:id/send', sendInvoiceToCustomer);
 
 export default router;
