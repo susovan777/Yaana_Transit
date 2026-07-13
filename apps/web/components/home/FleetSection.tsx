@@ -90,7 +90,7 @@ function CarCard({ car }: { car: Car }) {
           Recommended: 600×400px, white/light background
         */}
         <Image
-          src={`/images/cars/${car.id}.png`}
+          src={`/images/cars/${car.id}.jpg`}
           alt={car.name}
           key={car.name}
           fill

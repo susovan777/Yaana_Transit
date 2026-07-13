@@ -40,18 +40,12 @@ export default function CarCard({ car, priority = false }: CarCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
-      whileHover={{ y: -6 }}
-      className="group relative flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#C5D9F5] transition-all duration-300"
+      className="group relative flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#C5D9F5] transition-shadow duration-300"
     >
       {/* ── Car image ─────────────────────────────────────────── */}
       <div className="relative h-[200px] bg-[#F7F9FC] overflow-hidden">
-        {/*
-          Place white car images at /public/images/cars/<id>.png
-          Recommended: 600×400px, transparent or white background
-          e.g. /public/images/cars/maruti-dzire.png
-        */}
         <Image
-          src={`/images/cars/${car.id}.png`}
+          src={`/images/cars/${car.id}.jpg`}
           alt={car.name}
           fill
           priority={priority}
