@@ -1,10 +1,13 @@
-// Path: components\home\WhyUs.tsx
+// Path: components/home/WhyUs.tsx
 
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-import { USP_ITEMS, FEATURE_CARDS, HIGHLIGHT_CARD } from '@/lib/data/why-us';
+import { USP_ITEMS, FEATURE_CARDS } from '@/lib/data/why-us';
+// HIGHLIGHT_CARD commented out as per client request
+// import { HIGHLIGHT_CARD } from '@/lib/data/why-us';
 
 // ─────────────────────────────────────────
 // ANIMATION VARIANTS
@@ -34,15 +37,6 @@ const fadeLeft = {
   },
 };
 
-const fadeRight = {
-  hidden: { opacity: 0, x: 24 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const },
-  },
-};
-
 // ─────────────────────────────────────────
 // USP ITEM — left column bullet
 // ─────────────────────────────────────────
@@ -57,13 +51,11 @@ function UspItem({
 }) {
   return (
     <motion.div variants={fadeLeft} className="flex items-start gap-4">
-      {/* Icon box */}
       <div className="flex items-center justify-center w-9 h-9 rounded-btn bg-sky-pale shrink-0 text-[18px]">
         {icon}
       </div>
-
       <div>
-        <p className="text-[15px] font-600 text-navy mb-1">{title}</p>
+        <p className="text-[15px] font-semibold text-navy mb-1">{title}</p>
         <p className="text-[13px] leading-[1.65] text-muted">{description}</p>
       </div>
     </motion.div>
@@ -71,7 +63,7 @@ function UspItem({
 }
 
 // ─────────────────────────────────────────
-// FEATURE CARD — right 2×2 grid
+// FEATURE CARD — 2×2 grid below image
 // ─────────────────────────────────────────
 function FeatureCard({
   icon,
@@ -85,11 +77,11 @@ function FeatureCard({
   return (
     <motion.div
       variants={fadeUp}
-      className="group bg-white rounded-card border-[1.5px] border-line p-6 hover:border-sky-soft hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(11,31,58,0.07)]"
+      className="group bg-white rounded-card border-[1.5px] border-line p-5 hover:border-sky-soft hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(11,31,58,0.07)] transition-all duration-200"
     >
-      <div className="text-[28px] mb-3">{icon}</div>
-      <h4 className="text-[15px] font-semibold text-navy mb-1.5">{title}</h4>
-      <p className="text-[13px] leading-[1.65] text-muted">{description}</p>
+      <div className="text-[24px] mb-2.5">{icon}</div>
+      <h4 className="text-[14px] font-semibold text-navy mb-1">{title}</h4>
+      <p className="text-[12px] leading-[1.65] text-muted">{description}</p>
     </motion.div>
   );
 }
@@ -113,7 +105,7 @@ export default function WhyUsSection() {
             variants={fadeLeft}
             className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-sky-pale border border-sky-soft text-[12px] font-semibold text-sky-brand tracking-[0.5px] mb-4"
           >
-            🌟 Why YAANA Transite
+            🌟 Why YAANA Transit
           </motion.div>
 
           {/* Heading */}
@@ -132,8 +124,8 @@ export default function WhyUsSection() {
             variants={fadeLeft}
             className="text-[16px] leading-[1.75] text-muted mb-10 max-w-[480px]"
           >
-            We know what Indian travellers need. Transparent pricing, reliable
-            drivers, and a team that picks up the phone at 2 AM.
+            We know what corporate India needs — professional chauffeurs,
+            transparent billing, and a team that responds in minutes, not hours.
           </motion.p>
 
           {/* USP list */}
@@ -144,7 +136,7 @@ export default function WhyUsSection() {
           </div>
         </motion.div>
 
-        {/* ── RIGHT: Feature cards ── */}
+        {/* ── RIGHT: Chauffeur image + feature cards ── */}
         <motion.div
           variants={stagger(0.15)}
           initial="hidden"
@@ -152,23 +144,62 @@ export default function WhyUsSection() {
           viewport={{ once: true, margin: '-80px' }}
           className="flex flex-col gap-4"
         >
-          {/* 2×2 card grid */}
-          <div className="grid grid-cols-2 gap-4">
+          {/* ── Chauffeur photo ──
+               Place at: /public/images/chauffeurs.png
+               This is the 3-chauffeur team photo in uniform.
+               Recommended: keep original aspect ratio (~4:3 landscape)
+               The image fills the container width; height is auto.
+          ── */}
+          <motion.div
+            variants={fadeUp}
+            className="relative w-full overflow-hidden rounded-2xl shadow-lg"
+            style={{ aspectRatio: '4 / 3' }}
+          >
+            <Image
+              src="/images/chauffeurs.png"
+              alt="YAANA Transit — Professional uniformed chauffeurs"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center"
+            />
+
+            {/* Subtle bottom gradient so cards below don't clash */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  'linear-gradient(to bottom, transparent 60%, rgba(247,249,252,0.4) 100%)',
+              }}
+            />
+
+            {/* "Our Chauffeurs" badge — bottom-left */}
+            <div className="absolute bottom-4 left-4">
+              <span className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3.5 py-2 rounded-full shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-sky-brand shrink-0" />
+                <span className="text-[12px] font-semibold text-navy tracking-[0.3px]">
+                  Verified YAANA Chauffeurs
+                </span>
+              </span>
+            </div>
+          </motion.div>
+
+          {/* ── 2×2 feature cards ── */}
+          <div className="grid grid-cols-2 gap-3">
             {FEATURE_CARDS.map((card) => (
               <FeatureCard key={card.id} {...card} />
             ))}
           </div>
 
-          {/* Highlight card — full width, navy */}
+          {/* HIGHLIGHT_CARD removed as per client request */}
+          {/*
           <motion.div
             variants={fadeUp}
             className="flex items-start gap-4 bg-navy rounded-card p-6"
           >
-            {/* Icon */}
             <div className="flex items-center justify-center w-12 h-12 rounded-btn bg-sky-brand/20 shrink-0 text-[24px]">
               {HIGHLIGHT_CARD.icon}
             </div>
-
             <div>
               <h4 className="text-[15px] font-semibold text-white mb-1.5">
                 {HIGHLIGHT_CARD.title}
@@ -178,6 +209,7 @@ export default function WhyUsSection() {
               </p>
             </div>
           </motion.div>
+          */}
         </motion.div>
       </div>
     </section>
