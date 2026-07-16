@@ -92,126 +92,104 @@ function FeatureCard({
 export default function WhyUsSection() {
   return (
     <section id="why" className="bg-off-white py-24 px-6 md:px-10 xl:px-14">
-      <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-        {/* ── LEFT: Text content ── */}
-        <motion.div
-          variants={stagger(0)}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
-        >
-          {/* Pill */}
-          <motion.div
-            variants={fadeLeft}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-sky-pale border border-sky-soft text-[12px] font-semibold text-sky-brand tracking-[0.5px] mb-4"
-          >
-            🌟 Why YAANA Transit
-          </motion.div>
+      
 
-          {/* Heading */}
-          <motion.h2
-            variants={fadeLeft}
-            className="text-[clamp(32px,4vw,48px)] font-bold leading-[1.12] text-navy mb-4"
-            style={{ fontFamily: 'var(--font-display)' }}
-          >
-            Driven by <em className="not-italic text-sky-brand">Trust,</em>
-            <br />
-            Built for India
-          </motion.h2>
+      <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20 md:gap-y-10 items-center">
+  {/* ── LEFT: Text content ── */}
+  <motion.div
+    variants={stagger(0)}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: '-80px' }}
+  >
+    {/* Pill */}
+    <motion.div
+      variants={fadeLeft}
+      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-sky-pale border border-sky-soft text-[12px] font-semibold text-sky-brand tracking-[0.5px] mb-4"
+    >
+      🌟 Why YAANA Transit
+    </motion.div>
 
-          {/* Description */}
-          <motion.p
-            variants={fadeLeft}
-            className="text-[16px] leading-[1.75] text-muted mb-10 max-w-[480px]"
-          >
-            We know what corporate India needs — professional chauffeurs,
-            transparent billing, and a team that responds in minutes, not hours.
-          </motion.p>
+    {/* Heading */}
+    <motion.h2
+      variants={fadeLeft}
+      className="text-[clamp(32px,4vw,48px)] font-bold leading-[1.12] text-navy mb-4"
+      style={{ fontFamily: 'var(--font-display)' }}
+    >
+      Driven by <em className="not-italic text-sky-brand">Trust,</em>
+      <br />
+      Built for India
+    </motion.h2>
 
-          {/* USP list */}
-          <div className="flex flex-col gap-6">
-            {USP_ITEMS.map((item) => (
-              <UspItem key={item.title} {...item} />
-            ))}
-          </div>
-        </motion.div>
+    {/* Description */}
+    <motion.p
+      variants={fadeLeft}
+      className="text-[16px] leading-[1.75] text-muted mb-10 max-w-[480px]"
+    >
+      We know what corporate India needs — professional chauffeurs,
+      transparent billing, and a team that responds in minutes, not hours.
+    </motion.p>
 
-        {/* ── RIGHT: Chauffeur image + feature cards ── */}
-        <motion.div
-          variants={stagger(0.15)}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
-          className="flex flex-col gap-4"
-        >
-          {/* ── Chauffeur photo ──
-               Place at: /public/images/chauffeurs.png
-               This is the 3-chauffeur team photo in uniform.
-               Recommended: keep original aspect ratio (~4:3 landscape)
-               The image fills the container width; height is auto.
-          ── */}
-          <motion.div
-            variants={fadeUp}
-            className="relative w-full overflow-hidden rounded-2xl shadow-lg"
-            style={{ aspectRatio: '4 / 3' }}
-          >
-            <Image
-              src="/images/chauffeurs.png"
-              alt="YAANA Transit — Professional uniformed chauffeurs"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center"
-            />
+    {/* USP list */}
+    <div className="flex flex-col gap-6">
+      {USP_ITEMS.map((item) => (
+        <UspItem key={item.title} {...item} />
+      ))}
+    </div>
+  </motion.div>
 
-            {/* Subtle bottom gradient so cards below don't clash */}
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background:
-                  'linear-gradient(to bottom, transparent 60%, rgba(247,249,252,0.4) 100%)',
-              }}
-            />
+  {/* ── RIGHT: Chauffeur image + feature cards ── */}
+  <motion.div
+    variants={stagger(0.15)}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: '-80px' }}
+    className="flex flex-col gap-4"
+  >
+    {/* ── Chauffeur photo ── */}
+    <motion.div
+      variants={fadeUp}
+      className="relative w-full overflow-hidden rounded-2xl shadow-lg"
+      style={{ aspectRatio: '4 / 3' }}
+    >
+      <Image
+        src="/images/chauffeurs.png"
+        alt="YAANA Transit — Professional uniformed chauffeurs"
+        fill
+        priority
+        sizes="(max-width: 1024px) 100vw, 50vw"
+        className="object-cover object-center"
+      />
 
-            {/* "Our Chauffeurs" badge — bottom-left */}
-            <div className="absolute bottom-4 left-4">
-              <span className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3.5 py-2 rounded-full shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-sky-brand shrink-0" />
-                <span className="text-[12px] font-semibold text-navy tracking-[0.3px]">
-                  Verified YAANA Chauffeurs
-                </span>
-              </span>
-            </div>
-          </motion.div>
+      {/* Subtle bottom gradient so cards below don't clash */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(to bottom, transparent 60%, rgba(247,249,252,0.4) 100%)',
+        }}
+      />
 
-          {/* ── 2×2 feature cards ── */}
-          <div className="grid grid-cols-2 gap-3">
-            {FEATURE_CARDS.map((card) => (
-              <FeatureCard key={card.id} {...card} />
-            ))}
-          </div>
-
-          {/* HIGHLIGHT_CARD removed as per client request */}
-          {/*
-          <motion.div
-            variants={fadeUp}
-            className="flex items-start gap-4 bg-navy rounded-card p-6"
-          >
-            <div className="flex items-center justify-center w-12 h-12 rounded-btn bg-sky-brand/20 shrink-0 text-[24px]">
-              {HIGHLIGHT_CARD.icon}
-            </div>
-            <div>
-              <h4 className="text-[15px] font-semibold text-white mb-1.5">
-                {HIGHLIGHT_CARD.title}
-              </h4>
-              <p className="text-[13px] leading-[1.65] text-white/60">
-                {HIGHLIGHT_CARD.description}
-              </p>
-            </div>
-          </motion.div>
-          */}
-        </motion.div>
+      {/* "Our Chauffeurs" badge — bottom-left */}
+      <div className="absolute bottom-4 left-4">
+        <span className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3.5 py-2 rounded-full shadow-sm">
+          <span className="w-2 h-2 rounded-full bg-sky-brand shrink-0" />
+          <span className="text-[12px] font-semibold text-navy tracking-[0.3px]">
+            Verified YAANA Chauffeurs
+          </span>
+        </span>
       </div>
+    </motion.div>
+  </motion.div>
+
+  {/* ── 1×4 feature cards — full width horizontal ── */}
+  {/* Added col-span-full to stretch across both lg:grid-cols-2 columns */}
+  <div className="col-span-full grid grid-cols-2 md:grid-cols-4 gap-3 lg:mt-6">
+    {FEATURE_CARDS.map((card) => (
+      <FeatureCard key={card.id} {...card} />
+    ))}
+  </div>
+</div>
     </section>
   );
 }

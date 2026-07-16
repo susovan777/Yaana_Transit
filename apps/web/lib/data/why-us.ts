@@ -73,7 +73,7 @@ export const FEATURE_CARDS: FeatureCard[] = [
   {
     id: 'cities',
     icon: '🌐',
-    title: '50+ Cities',
+    title: '10+ Cities',
     description:
       "From Tier-1 metros to pilgrim routes and hill stations — we're everywhere you go.",
   },
