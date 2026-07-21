@@ -59,6 +59,11 @@ import {
   updateBooking,
   updateBookingStatus,
 } from '../controllers/booking.controller';
+import {
+  gstReport,
+  bookingSummaryReport,
+  revenueReport,
+} from '../controllers/report.controller';
 
 const router: Router = Router();
 router.use(authenticate, authorize('YAANA_ADMIN'));
@@ -116,5 +121,10 @@ router.post(
 );
 router.get('/invoices/:id/pdf', downloadInvoicePdf);
 router.post('/invoices/:id/send', sendInvoiceToCustomer);
+
+// ── Reports ───────────────────────────────────────────────────────────
+router.get('/reports/gst', gstReport);
+router.get('/reports/bookings', bookingSummaryReport);
+router.get('/reports/revenue', revenueReport);
 
 export default router;

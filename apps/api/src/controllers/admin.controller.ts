@@ -185,6 +185,12 @@ export const inviteUser = catchAsync(async (req: Request, res: Response) => {
   // Generate invitation token
   const { raw: rawToken, hashed: hashedToken } = generateSecureToken();
 
+  // Fetch inviting admin's name for the email
+  const invitingAdmin = await prisma.user.findUnique({
+    where: { id: req.user!.userId },
+    select: { name: true },
+  });
+
   // Create user + invitation token in a transaction
   const user = await prisma.$transaction<any>(async (tx) => {
     const newUser = await tx.user.create({
@@ -215,7 +221,7 @@ export const inviteUser = catchAsync(async (req: Request, res: Response) => {
     toEmail: user.email,
     toName: user.name,
     companyName: company.name,
-    invitedByName: req.user!.userId, // We'll improve this to a name later
+    invitedByName: invitingAdmin?.name ?? 'Yaana Transit Team',
     activationToken: rawToken,
   });
 
