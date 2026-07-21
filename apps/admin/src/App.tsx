@@ -1,4 +1,5 @@
 // Path: apps/admin/src/App.tsx
+
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './store/auth.store';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
@@ -10,14 +11,8 @@ import { DashboardPage } from './pages/DashboardPage';
 import { CompaniesPage } from './pages/CompaniesPage';
 import { BookingsPage } from './pages/BookingPage';
 import { InvoicesPage } from './pages/InvoicePage';
-import {
-  // CompaniesPage,
-  // FleetPage,
-  // BookingsPage,
-  // InvoicesPage,
-  ReportsPage,
-  UsersPage,
-} from './pages/stubs';
+import { ReportsPage } from './pages/ReportsPage';
+import { UsersPage } from './pages/UsersPage';
 
 export default function App() {
   return (
