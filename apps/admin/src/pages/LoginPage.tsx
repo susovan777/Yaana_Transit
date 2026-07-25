@@ -6,7 +6,7 @@ import toast from 'react-hot-toast';
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../store/auth.store';
 import { Eye, EyeOff } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 const loginSchema = z.object({
@@ -190,12 +190,12 @@ export function LoginPage() {
 
             {/* Forgot password */}
             <div className="flex justify-end">
-              <a
-                href="/forgot-password"
+              <Link
+                to="/forgot-password"
                 className="text-xs text-[#3A6AB6] hover:underline"
               >
                 Forgot password?
-              </a>
+              </Link>
             </div>
 
             {/* Submit */}

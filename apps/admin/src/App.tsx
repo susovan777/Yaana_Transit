@@ -13,6 +13,7 @@ import { BookingsPage } from './pages/BookingPage';
 import { InvoicesPage } from './pages/InvoicePage';
 import { ReportsPage } from './pages/ReportsPage';
 import { UsersPage } from './pages/UsersPage';
+import { ForgotPasswordPage } from './pages/ForgotPasswordPage';
 
 export default function App() {
   return (
@@ -21,6 +22,8 @@ export default function App() {
         {/* Public routes */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/activate" element={<ActivatePage />} />
+        <Route path="/reset-password" element={<ActivatePage />} />
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
 
         {/* Protected routes — wrapped in AppLayout (sidebar + topbar) */}
         <Route element={<ProtectedRoute />}>
