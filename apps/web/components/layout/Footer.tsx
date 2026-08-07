@@ -118,7 +118,9 @@ export default function Footer() {
           <div>
             <Logo src="/logo.png" width="w-[200px]" height="h-[100px]" />
 
-            <p className="mt-2 mb-5 text-[14px] text-white/45">GSTIN: {SITE.gstNumber}</p>
+            <p className="mt-2 mb-5 text-[14px] text-white/45">
+              GSTIN: {SITE.gstNumber}
+            </p>
 
             {/* Tagline */}
             {/* <p
@@ -180,10 +182,12 @@ export default function Footer() {
         {/* ── Bottom bar ── */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-8">
           <p className="text-[13px] text-white/30 text-center sm:text-left">
-            © {new Date().getFullYear()} YAANA Transit Pvt. Ltd. · All rights
+            &copy; {new Date().getFullYear()}{" "} Yaana Transit &#9642; All rights
             reserved.
           </p>
-          <p className="text-[13px] text-white/30">Made with ♥ for India</p>
+          <p className="text-[13px] text-white/30">
+            Made with &#10084; for India
+          </p>
         </div>
       </div>
     </footer>

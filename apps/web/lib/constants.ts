@@ -14,8 +14,7 @@ export const SITE = {
   phone: '+91 98765 43210',
   phoneRaw: '919876543210',
   email: 'hello@yaanatransit.com',
-  address: `Site no. 32 & 33, K.No. 119, 
-            Green Cliff Builders & Developers Layout,
+  address: `Green Cliff Layout,
             Mahadevakodigehalli,
             Bengaluru, Karnataka, India, 562149`,
   whatsappBase: 'https://wa.me/919876543210',
@@ -43,6 +42,7 @@ export type NavLink = {
 };
 
 export const NAV_LINKS: NavLink[] = [
+  { label: 'Home', href: '/' },
   { label: 'Fleet', href: '/fleet' },
   { label: 'Services', href: '/services' },
   { label: 'Cities', href: '/cities' },
@@ -63,7 +63,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     heading: 'Services',
     links: [
       { label: 'Chauffeur-Driven', href: '#services' },
-      { label: 'Employee Transportation (ETS)', href: '#services' },
+      { label: 'Employee Transportation', href: '#services' },
       { label: 'Airport Transfer', href: '#services' },
       { label: 'Outstation Trips', href: '#services' },
       { label: 'Corporate Rentals', href: '#services' },
@@ -84,13 +84,13 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     heading: 'Company',
     links: [
-      { label: 'About Us', href: '/about' },
+      { label: 'About Us', href: '/why' },
       { label: 'Our Fleet', href: '/fleet' },
       { label: 'Contact', href: '/contact' },
-      { label: 'Privacy Policy', href: '/privacy' },
-      { label: 'Terms of Service', href: '/terms' },
-      { label: 'Cancellation Policy', href: '/cancellation' },
-      { label: 'Client Login', href: 'https://admin.yaanatransit.com' },
+      { label: 'Privacy Policy', href: '/privacy-policy' },
+      { label: 'Terms and Conditions', href: '/terms-and-conditions' },
+      { label: 'Common Questions', href: '/common-questions' },
+      // { label: 'Client Login', href: 'https://admin.yaanatransit.com' },
     ],
   },
 ];
@@ -140,8 +140,7 @@ export const FOOTER_CONTACT: ContactItem[] = [
   {
     icon: '📍',
     label: 'Head Office',
-    value: `Site no. 32 & 33, K.No. 119, 
-            Green Cliff Builders & Developers Layout,
+    value: `Green Cliff Layout,
             Mahadevakodigehalli, Bengaluru, 
             Karnataka, 562149`,
     href: '#',

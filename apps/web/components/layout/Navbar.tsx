@@ -1,14 +1,16 @@
-// Path: apps\web\components\layout\Navbar.tsx
+// Path: apps/web/components/layout/Navbar.tsx
 
 'use client';
 
 import Logo from '../Logo';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'; 
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { buildWhatsAppUrl, NAV_LINKS, WA_MESSAGES } from '@/lib/constants';
 
 export default function Navbar() {
+  const pathname = usePathname(); // Get current active route path
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -49,16 +51,27 @@ export default function Navbar() {
       >
         <Logo src="/logo.png" width="w-[200px]" height="h-[150px]" />
 
+        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="relative text-[16px] font-medium text-muted hover:text-navy transition-colors duration-200 tracking-[0.2px] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-navy after:transition-all after:duration-300 hover:after:w-full"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href;
+
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                className={[
+                  'relative text-[16px] font-medium tracking-[0.2px] transition-colors duration-200',
+                  "after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-navy after:transition-all after:duration-300",
+                  isActive
+                    ? 'text-navy font-semibold after:w-full' // Active state styling
+                    : 'text-muted hover:text-navy after:w-0 hover:after:w-full', // Inactive state
+                ].join(' ')}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
@@ -92,6 +105,7 @@ export default function Navbar() {
         />
       )}
 
+      {/* Mobile Navigation Drawer */}
       <div
         className={[
           'fixed top-[68px] inset-x-0 z-40 lg:hidden',
@@ -101,24 +115,26 @@ export default function Navbar() {
         ].join(' ')}
       >
         <nav className="flex flex-col px-6 py-4 gap-1">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="py-3 text-[15px] font-medium text-navy border-b border-line last:border-0 hover:text-sky-brand transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href;
+
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className={[
+                  'py-3 text-[15px] border-b border-line last:border-0 transition-colors px-3 rounded-md',
+                  isActive
+                    ? 'font-semibold text-sky-brand bg-sky-brand/10'
+                    : 'font-medium text-navy hover:text-sky-brand',
+                ].join(' ')}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <div className="flex flex-col gap-3 pt-4 pb-2">
-            {/* <Link
-              href={`tel:${SITE.phoneRaw}`}
-              className="flex items-center justify-center gap-2 py-3 rounded-btn border border-line text-[14px] font-semibold text-sky-brand"
-            >
-              <Phone className="w-4 h-4" strokeWidth={2} />
-              {SITE.phone}
-            </Link> */}
             <Link
               href={waUrl}
               target="_blank"

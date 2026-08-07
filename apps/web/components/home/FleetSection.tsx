@@ -231,7 +231,7 @@ export default function FleetSection() {
               className="mt-3 text-[16px] leading-[1.75] text-muted max-w-[480px]"
             >
               Sedan to luxury — every vehicle is chauffeur-driven, fully
-              insured, and available across 10+ cities.
+              insured, and available across 50+ cities.
             </motion.p>
           </div>
 
