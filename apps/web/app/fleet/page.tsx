@@ -88,7 +88,7 @@ export default function FleetPage() {
           </h1>
           <p className="text-white/55 text-base md:text-lg leading-relaxed max-w-xl">
             Sedan to luxury — every vehicle is chauffeur-driven, fully insured,
-            and available across 10+ cities for your corporate travel needs.
+            and available across 50+ cities for your corporate travel needs.
           </p>
 
           {/* Stats row */}
