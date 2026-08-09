@@ -160,7 +160,7 @@ export default function HeroSection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'linear-gradient(105deg, rgba(11,31,58,0.97) 0%, rgba(11,31,58,0.88) 45%, rgba(11,31,58,0.55) 100%)',
+            'linear-gradient(105deg, rgba(11,31,58,0.97) 0%,  rgba(11,31,58,0.55) 100%)',
         }}
       />
 
@@ -239,7 +239,7 @@ export default function HeroSection() {
               href={waUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-btn bg-white/8 border border-white/20 text-white text-[14px] font-medium transition-all duration-200 hover:bg-white/[0.14] hover:border-white/35"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-btn bg-white/8 border border-white/20 text-white text-[14px] font-medium transition-all duration-200 hover:bg-wa-green hover:text-black"
             >
               <WhatsAppIcon size={18} />
               WhatsApp Us
@@ -266,14 +266,14 @@ export default function HeroSection() {
           */}
           <div className="relative w-full max-w-[620px]">
             {/* Glow beneath the car */}
-            <div
+            {/* <div
               className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-24 pointer-events-none"
               style={{
                 background:
                   'radial-gradient(ellipse, rgba(46,111,216,0.45) 0%, transparent 70%)',
                 filter: 'blur(18px)',
               }}
-            />
+            /> */}
 
             {/* <Image
               src="/images/hero-car.png"

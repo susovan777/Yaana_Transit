@@ -265,7 +265,7 @@ export default function InquirySection() {
                   icon={<Clock className="w-4 h-4" strokeWidth={2} />}
                 >
                   <span className="text-white/60">
-                    Available 6 AM – 11 PM, 7 days a week
+                    Available 24 Hours x 7 Days
                   </span>
                 </ContactItem>
               </motion.div>

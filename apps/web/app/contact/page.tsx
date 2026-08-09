@@ -34,7 +34,7 @@ const CONTACT_METHODS = [
     icon: <Phone className="w-5 h-5" strokeWidth={2} />,
     label: 'Call Us',
     value: SITE.phone,
-    sub: 'Mon – Sat, 6 AM – 11 PM',
+    sub: '24 Hours × 7 Days',
     href: `tel:${SITE.phone}`,
     bg: 'bg-[#EBF2FF]',
     color: 'text-[#3A6AB6]',
@@ -63,8 +63,8 @@ const CONTACT_METHODS = [
   {
     icon: <Clock className="w-5 h-5" strokeWidth={2} />,
     label: 'Working Hours',
-    value: '6 AM – 11 PM',
-    sub: 'All 7 days of the week',
+    value: '24 Hours x 7 Days',
+    sub: '365 Days a Year',
     href: null,
     bg: 'bg-amber-50',
     color: 'text-amber-600',
@@ -224,9 +224,9 @@ export default function ContactPage() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#3A6AB6] hover:bg-[#2560C0] text-white text-[13px] font-semibold transition-all duration-200 hover:-translate-y-px shrink-0"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-wa-green hover:bg-[#2560C0] text-white font-semibold transition-all duration-200 hover:-translate-y-px shrink-0"
             >
-              <WhatsAppIcon size={14} />
+              <WhatsAppIcon size={15} />
               WhatsApp HQ
             </Link>
           </div>
@@ -286,7 +286,7 @@ export default function ContactPage() {
             {[
               {
                 q: 'How quickly do you respond to enquiries?',
-                a: 'Our corporate team responds via WhatsApp within 15 minutes during working hours (6 AM – 11 PM, all days).',
+                a: 'Our corporate team responds via WhatsApp within 15 minutes during working hours (24 Hours x 7 Days).',
               },
               {
                 q: 'Do you provide GST-compliant invoices?',
@@ -327,7 +327,7 @@ export default function ContactPage() {
             Prefer to just call?
           </h2>
           <p className="text-slate-500 text-base mb-8">
-            Our team is available 6 AM – 11 PM, all days. No hold music, no bots
+            Our team is available 24 Hours x 7 Days, 365 days a year. No hold music, no bots
             — a real person picks up.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -344,7 +344,7 @@ export default function ContactPage() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 border border-slate-200 hover:border-[#1C1F26] text-slate-600 hover:text-[#1C1F26] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2.5 border border-wa-green  text-wa-green hover:bg-wa-green hover:text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 w-full sm:w-auto justify-center"
             >
               <WhatsAppIcon size={16} />
               WhatsApp Us

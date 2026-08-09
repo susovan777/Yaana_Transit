@@ -421,7 +421,7 @@ export default function WhyPage() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-[#3A6AB6] hover:bg-[#2560C0] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 hover:-translate-y-px hover:shadow-lg hover:shadow-[#3A6AB6]/30 shrink-0"
+              className="inline-flex items-center gap-2.5 bg-wa-green hover:bg-[#2560C0] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 hover:-translate-y-px hover:shadow-lg hover:shadow-[#3A6AB6]/30 shrink-0"
             >
               <WhatsAppIcon size={16} />
               Book on WhatsApp

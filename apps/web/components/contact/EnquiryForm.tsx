@@ -283,7 +283,7 @@ export default function EnquiryForm() {
               {/* Submit */}
               <button
                 type="submit"
-                className="mt-1 w-full inline-flex items-center justify-center gap-2.5 bg-[#1C1F26] hover:bg-[#3A6AB6] text-white font-semibold py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-px hover:shadow-lg hover:shadow-[#3A6AB6]/25 text-[14px]"
+                className="mt-1 w-full inline-flex items-center justify-center gap-2.5 bg-[#1C1F26] hover:bg-wa-green text-white font-semibold py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-px hover:shadow-lg hover:shadow-[#3A6AB6]/25 text-[14px] cursor-pointer"
               >
                 <Send className="w-4 h-4" strokeWidth={2} />
                 Send via WhatsApp
