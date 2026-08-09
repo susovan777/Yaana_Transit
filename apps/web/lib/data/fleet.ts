@@ -14,7 +14,8 @@ export type CarCategory =
   | 'suv'
   | 'premium-suv'
   | 'premium'
-  | 'luxury';
+  | 'luxury'
+  | 'traveller';
 
 export type BadgeStyle = 'blue' | 'navy' | 'green';
 
@@ -121,8 +122,19 @@ export const FLEET: Car[] = [
     badge: 'Luxury',
     badgeStyle: 'blue',
   },
+  
+  // ── TRAVELLER / VAN ──
+  {
+    id: 'force-urbania',
+    name: 'Force Urbania',
+    category: 'traveller',
+    typeLabel: 'Executive Van · 16-Seater',
+    seats: 16,
+    transmission: 'Manual',
+    badge: 'Executive Van',
+    badgeStyle: 'navy',
+  },
 ];
-
 
 export type FleetCategory = {
   value: CarCategory | 'all';
@@ -130,13 +142,14 @@ export type FleetCategory = {
 };
 
 export const FLEET_CATEGORIES: FleetCategory[] = [
-  { value: 'all',         label: 'All Vehicles' },
-  { value: 'sedan',       label: 'Sedan' },
-  { value: 'muv',         label: 'MUV' },
-  { value: 'suv',         label: 'SUV' },
+  { value: 'all', label: 'All Vehicles' },
+  { value: 'sedan', label: 'Sedan' },
+  { value: 'muv', label: 'MUV' },
+  { value: 'suv', label: 'SUV' },
   { value: 'premium-suv', label: 'Premium SUV' },
-  { value: 'premium',     label: 'Premium' },
-  { value: 'luxury',      label: 'Luxury' },
+  { value: 'premium', label: 'Premium' },
+  { value: 'luxury', label: 'Luxury' },
+  { value: 'traveller', label: 'Traveller' },
 ];
 
 export function filterFleet(category: CarCategory | 'all'): Car[] {
