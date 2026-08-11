@@ -72,21 +72,26 @@ function TestimonialCard({ testi }: { testi: Testimonial }) {
       variants={cardVariants}
       className="group flex flex-col gap-5 bg-white rounded-card border-[1.5px] border-[#D0E4FF] p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(46,111,216,0.1)]"
     >
-      {/* Opening quote */}
-      <span
-        className="text-[40px] leading-none text-sky-brand select-none"
-        style={{ fontFamily: 'var(--font-display)' }}
-        aria-hidden="true"
-      >
-        &ldquo;
-      </span>
+      {/* Top Header: Opening quote & B2B Service Pill */}
+      <div className="flex items-center justify-between">
+        <span
+          className="text-[40px] leading-none text-sky-brand select-none"
+          style={{ fontFamily: 'var(--font-display)' }}
+          aria-hidden="true"
+        >
+          &ldquo;
+        </span>
+        <span className="inline-block px-2.5 py-1 rounded-md bg-sky-pale border border-sky-soft text-[11px] font-semibold text-sky-brand tracking-wide">
+          {testi.service}
+        </span>
+      </div>
 
       {/* Stars */}
       <Stars count={testi.rating} />
 
       {/* Review text */}
       <p
-        className="text-[17px] italic leading-[1.7] text-navy flex-1"
+        className="text-[16px] italic leading-[1.7] text-navy flex-1"
         style={{ fontFamily: 'var(--font-display)' }}
       >
         {testi.text}
@@ -95,8 +100,8 @@ function TestimonialCard({ testi }: { testi: Testimonial }) {
       {/* Divider */}
       <div className="h-px bg-line" />
 
-      {/* Reviewer */}
-      <div className="flex items-center gap-3">
+      {/* Reviewer Details */}
+      <div className="flex items-center gap-3.5">
         {/* Avatar */}
         <div
           className={`flex items-center justify-center w-11 h-11 rounded-full shrink-0 text-white text-[16px] font-bold ${testi.avatarBg}`}
@@ -104,10 +109,15 @@ function TestimonialCard({ testi }: { testi: Testimonial }) {
           {testi.initial}
         </div>
 
-        <div>
-          <p className="text-[14px] font-semibold text-navy">{testi.name}</p>
-          <p className="text-[12px] text-muted mt-0.5">
-            {testi.city} · {testi.service}
+        <div className="flex flex-col">
+          <p className="text-[15px] font-bold text-navy leading-snug">
+            {testi.name}
+          </p>
+          <p className="text-[12px] font-medium text-sky-brand mt-0.5">
+            {testi.designation} · <span className="text-muted">{testi.companyType}</span>
+          </p>
+          <p className="text-[11px] text-muted/80 mt-0.5">
+            {testi.city}
           </p>
         </div>
       </div>
