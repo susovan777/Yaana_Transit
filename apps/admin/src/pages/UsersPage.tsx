@@ -1031,7 +1031,7 @@ export function UsersPage() {
                   <Input
                     {...inviteForm.register('phone')}
                     type="tel"
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 91138 73811"
                     error={inviteForm.formState.errors.phone?.message}
                   />
                 </Field>

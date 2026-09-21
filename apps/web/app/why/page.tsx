@@ -11,7 +11,7 @@ import { WhatsAppIcon } from '@/components/ui/SocialIcons';
 export const metadata: Metadata = {
   title: `Why Choose Us — ${SITE.name}`,
   description:
-    'GST-compliant invoicing, verified chauffeurs, zero hidden charges, and 24/7 support across 50+ cities. Here is why 500+ corporates trust YAANA Transit.',
+    'GST-compliant invoicing, verified chauffeurs, zero hidden charges, and 24/7 support across 75+ cities. Here is why 35+ corporates trust YAANA Transit.',
   openGraph: {
     title: `Why Choose Us — ${SITE.name}`,
     description:
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
 
 // ── Supporting proof points (page-only, not in why-us.ts) ────────────
 const PROOF_POINTS = [
-  { value: '500+', label: 'Corporate Clients' },
+  { value: '35+', label: 'Corporate Clients' },
   { value: '50K+', label: 'Trips Completed' },
   { value: '98%', label: 'On-Time Rate' },
   { value: '4.9★', label: 'Average Rating' },
-  { value: '50+', label: 'Cities Covered' },
+  { value: '75+', label: 'Cities Covered' },
   { value: '24/7', label: 'Support Available' },
 ];
 
@@ -128,7 +128,7 @@ export default function WhyPage() {
               </h1>
 
               <p className="text-white/55 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
-                500+ companies trust YAANA Transit for their employee transport,
+                35+ companies trust YAANA Transit for their employee transport,
                 executive travel, and event fleets — because we eliminate every
                 friction point between your team and a comfortable, on-time
                 ride.
@@ -440,7 +440,7 @@ export default function WhyPage() {
             Ready to simplify your corporate travel?
           </h2>
           <p className="text-slate-500 text-base mb-8 max-w-lg mx-auto">
-            Join 500+ companies that trust YAANA Transit for their daily
+            Join 35+ companies that trust YAANA Transit for their daily
             employee transport, executive rides, and event fleets.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">

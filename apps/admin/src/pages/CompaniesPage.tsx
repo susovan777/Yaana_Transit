@@ -337,7 +337,7 @@ function CompanyFormFields({
           <Field label="Phone" error={errors.phone?.message}>
             <Input
               {...register('phone')}
-              placeholder="+91 98765 43210"
+              placeholder="+91 91138 73811"
               error={errors.phone?.message}
             />
           </Field>

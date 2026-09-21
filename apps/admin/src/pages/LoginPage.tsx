@@ -81,7 +81,7 @@ export function LoginPage() {
         {/* Bottom stats */}
         <div className="flex gap-8 border-t border-white/10 pt-6">
           {[
-            { value: '50+', label: 'Cities' },
+            { value: '75+', label: 'Cities' },
             { value: '200+', label: 'Vehicles' },
             { value: '4.9★', label: 'Avg. Rating' },
           ].map((s) => (

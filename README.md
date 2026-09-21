@@ -2,7 +2,7 @@
 
 **Driven by Trust** — Enterprise-grade corporate transportation platform serving businesses across India.
 
-YAANA Transit is a B2B corporate car rental and employee transportation management platform. Built for companies that need reliable, GST-compliant, chauffeur-driven fleet services across 50+ cities in India.
+YAANA Transit is a B2B corporate car rental and employee transportation management platform. Built for companies that need reliable, GST-compliant, chauffeur-driven fleet services across 75+ cities in India.
 
 ---
 

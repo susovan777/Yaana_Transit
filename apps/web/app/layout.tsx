@@ -9,7 +9,7 @@ import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
 import ScrollToTop from '@/components/ui/ScrollToTop';
 
-// ─────────────────────────────────────────
+// ───────────────────────────────────────── 
 // FONTS — loaded via next/font (zero layout shift, self-hosted, no external request)
 // ─────────────────────────────────────────
 const outfit = Outfit({
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     template: '%s | YAANA Transit',
   },
   description:
-    'Premium car rentals across 50+ cities in India. Chauffeur-driven, self-drive and corporate rentals with transparent pricing and verified drivers.',
+    'Premium car rentals across 75+ cities in India. Chauffeur-driven, self-drive and corporate rentals with transparent pricing and verified drivers.',
   icons: {
     icon: '/favicon.png',
   },
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'YAANA Transit — Driven by Trust',
     description:
-      'Premium car rentals across 50+ cities in India. Chauffeur-driven, self-drive and corporate rentals.',
+      'Premium car rentals across 75+ cities in India. Chauffeur-driven, self-drive and corporate rentals.',
     url: 'https://YAANATransit.in',
     siteName: 'YAANA Transit',
     locale: 'en_IN',
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'YAANA Transit — Driven by Trust',
-    description: 'Premium car rentals across 50+ cities in India.',
+    description: 'Premium car rentals across 75+ cities in India.',
   },
   robots: {
     index: true,

@@ -10,13 +10,12 @@ export const SITE = {
   name: 'YAANA Transit',
   tagline: 'Driven by Trust',
   description:
-    'Corporate car rentals across 50+ cities in India. Chauffeur-driven, employee transportation, and dedicated corporate fleet — all with transparent service and verified chauffeurs.',
-  phone: '+91 98765 43210',
+    'Corporate car rentals across 75+ cities in India. Chauffeur-driven, employee transportation, and dedicated corporate fleet — all with transparent service and verified chauffeurs.',
+  phone: '+91 91138 73811',
   phoneRaw: '919876543210',
   email: 'hello@yaanatransit.com',
-  address: `Green Cliff Layout,
-            Mahadevakodigehalli,
-            Bengaluru, Karnataka, India, 562149`,
+  address: `Green Cliff Layout, KIADB Industrial Area,
+            Near Airport, Bengaluru, Karnataka, 562149`,
   whatsappBase: 'https://wa.me/919876543210',
   gstNumber: '29FCMPK3672M1ZR',
   pan: '',
@@ -28,7 +27,7 @@ export const WA_MESSAGES = {
 } as const;
 
 export function buildWhatsAppUrl(
-  message: string = WA_MESSAGES.default
+  message: string = WA_MESSAGES.default,
 ): string {
   return `${SITE.whatsappBase}?text=${encodeURIComponent(message)}`;
 }
@@ -122,7 +121,7 @@ export const FOOTER_CONTACT: ContactItem[] = [
   {
     icon: '📞',
     label: 'Phone',
-    value: '+91 98765 43210',
+    value: '+91 91138 73811',
     href: 'tel:+919876543210',
   },
   {
@@ -140,9 +139,8 @@ export const FOOTER_CONTACT: ContactItem[] = [
   {
     icon: '📍',
     label: 'Head Office',
-    value: `Green Cliff Layout,
-            Mahadevakodigehalli, Bengaluru, 
-            Karnataka, 562149`,
+    value: `Green Cliff Layout, KIADB Industrial Area,
+            Near Airport, Bengaluru, Karnataka, 562149`,
     href: '#',
   },
 ];

@@ -12,7 +12,7 @@ import { WhatsAppIcon } from '@/components/ui/SocialIcons';
 export const metadata: Metadata = {
   title: `Our Locations — ${SITE.name}`,
   description:
-    'YAANA Transit operates across 50+ cities in India. Head office in Bengaluru with branch offices in Delhi, Pune, Hyderabad, Mumbai and Chennai.',
+    'YAANA Transit operates across 75+ cities in India. Head office in Bengaluru with branch offices in Delhi, Pune, Hyderabad, Mumbai and Chennai.',
   openGraph: {
     title: `Our Locations — ${SITE.name}`,
     description:
@@ -125,7 +125,7 @@ function CityCard({
 // ── Stats strip ───────────────────────────────────────────────────────
 const STATS = [
   { value: '6', label: 'Office locations' },
-  { value: '50+', label: 'Cities served' },
+  { value: '75+', label: 'Cities served' },
   { value: '1', label: 'Head office' },
   { value: '5', label: 'Branch offices' },
 ];
@@ -355,7 +355,7 @@ export default function CitiesPage() {
             Need service in a city not listed?
           </h2>
           <p className="text-slate-500 text-base mb-8 max-w-lg mx-auto">
-            We cover 50+ cities and can arrange corporate transport on request
+            We cover 75+ cities and can arrange corporate transport on request
             across India. Contact us with your requirement.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">

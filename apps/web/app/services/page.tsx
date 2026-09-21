@@ -24,7 +24,7 @@ import { WhatsAppIcon } from '@/components/ui/SocialIcons';
 export const metadata: Metadata = {
   title: `Our Services — ${SITE.name}`,
   description:
-    'Chauffeur-driven rides, employee transportation, airport transfers, outstation trips, corporate leasing and event fleets — all across 50+ cities in India.',
+    'Chauffeur-driven rides, employee transportation, airport transfers, outstation trips, corporate leasing and event fleets — all across 75+ cities in India.',
   openGraph: {
     title: `Our Services — ${SITE.name}`,
     description:
@@ -98,7 +98,7 @@ export default function ServicesPage() {
           <div className="flex flex-wrap gap-8 mt-10 pt-8 border-t border-white/10">
             {[
               { value: '6', label: 'Service types' },
-              { value: '50+', label: 'Cities covered' },
+              { value: '75+', label: 'Cities covered' },
               { value: '15 min', label: 'Avg. response time' },
               { value: '24/7', label: 'Support' },
             ].map((s) => (

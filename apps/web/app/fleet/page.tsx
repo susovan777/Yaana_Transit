@@ -28,7 +28,7 @@ import { WhatsAppIcon } from '@/components/ui/SocialIcons';
 export const metadata: Metadata = {
   title: `Our Fleet — ${SITE.name}`,
   description:
-    'Browse our complete fleet — economy hatchbacks, comfortable sedans, spacious SUVs and luxury executive cars. Available across 50+ cities in India.',
+    'Browse our complete fleet — economy hatchbacks, comfortable sedans, spacious SUVs and luxury executive cars. Available across 75+ cities in India.',
   openGraph: {
     title: `Our Fleet — ${SITE.name}`,
     description:
@@ -88,15 +88,16 @@ export default function FleetPage() {
           </h1>
           <p className="text-white/55 text-base md:text-lg leading-relaxed max-w-xl">
             Sedan to luxury — every vehicle is chauffeur-driven, fully insured,
-            and available across 50+ cities for your corporate travel needs.
+            and available across 75+ cities for your corporate travel needs.
           </p>
 
           {/* Stats row */}
           <div className="flex flex-wrap gap-8 mt-10 pt-8 border-t border-white/10">
             {[
-              { value: `${allCars.length}+`, label: 'Vehicles' },
-              { value: '6', label: 'Categories' },
-              { value: '50+', label: 'Cities Covered' },
+              // { value: `${allCars.length}+`, label: 'Vehicles' },
+              { value: `200+`, label: 'Vehicles' },
+              { value: '14+', label: 'Categories' },
+              { value: '75+', label: 'Cities Covered' },
               { value: '24/7', label: 'Support' },
             ].map((s) => (
               <div key={s.label}>

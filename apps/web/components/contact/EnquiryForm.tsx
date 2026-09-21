@@ -214,7 +214,7 @@ export default function EnquiryForm() {
                   <input
                     type="tel"
                     required
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 91138 73811"
                     value={form.phone}
                     onChange={set('phone')}
                     className={inputCls}

@@ -57,7 +57,7 @@ const YAANA_DETAILS = {
   name: 'Yaana Transit Pvt. Ltd.',
   address: 'Bengaluru, Karnataka, India',
   email: 'accounts@yaanatransit.com',
-  phone: '+91 98765 43210',
+  phone: '+91 91138 73811',
 };
 
 // ── Helpers ────────────────────────────────────────────────────────────

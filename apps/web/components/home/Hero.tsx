@@ -63,7 +63,7 @@ type StatItem = {
 };
 
 const STATS: StatItem[] = [
-  { value: '50', suffix: '+', label: 'Cities Served' },
+  { value: '75', suffix: '+', label: 'Cities Served' },
   { value: '200', suffix: '+', label: 'Vehicles' },
   { value: '4.9', suffix: '★', label: 'Customer Rating' },
   { value: '8', suffix: 'k+', label: 'Happy Travellers' },
@@ -80,7 +80,7 @@ function HeroBadge() {
         animate={pulseDot.animate}
       />
       <span className="text-[12px] font-semibold text-[#6B96D4] tracking-[0.5px]">
-        Pan-India Car Rentals — 50+ Cities
+        Pan-India Car Rentals — 75+ Cities
       </span>
     </div>
   );
