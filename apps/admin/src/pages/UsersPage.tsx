@@ -238,7 +238,7 @@ function Drawer({
         onClick={onClose}
       />
       <div
-        className={`fixed top-0 right-0 h-full w-full max-w-[440px] z-50 flex flex-col bg-white shadow-2xl transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-full max-w-110 z-50 flex flex-col bg-white shadow-2xl transition-transform duration-300 ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -622,7 +622,7 @@ export function UsersPage() {
         style={{ borderColor: BORDER }}
       >
         {/* Search */}
-        <div className="relative flex-1 min-w-[180px]">
+        <div className="relative flex-1 min-w-45">
           <Search
             size={15}
             className="absolute left-3 top-1/2 -translate-y-1/2"
@@ -784,7 +784,7 @@ export function UsersPage() {
                         </div>
                         <div className="min-w-0">
                           <p
-                            className="font-semibold text-xs truncate max-w-[160px]"
+                            className="font-semibold text-xs truncate max-w-40"
                             style={{
                               color: NAVY,
                               fontFamily: 'Poppins, sans-serif',
@@ -793,7 +793,7 @@ export function UsersPage() {
                             {user.name}
                           </p>
                           <p
-                            className="text-xs truncate max-w-[160px]"
+                            className="text-xs truncate max-w-40"
                             style={{ color: MUTED }}
                           >
                             {user.email}
@@ -811,7 +811,7 @@ export function UsersPage() {
                     <td className="px-4 py-3">
                       {user.company ? (
                         <span
-                          className="inline-flex items-center gap-1.5 text-xs font-medium truncate max-w-[140px]"
+                          className="inline-flex items-center gap-1.5 text-xs font-medium truncate max-w-35"
                           style={{ color: NAVY }}
                         >
                           <Building2
@@ -874,7 +874,7 @@ export function UsersPage() {
 
                       {menuOpen === user.id && (
                         <div
-                          className="absolute right-0 top-10 z-30 bg-white rounded-xl border shadow-lg py-1 min-w-[180px]"
+                          className="absolute right-0 top-10 z-30 bg-white rounded-xl border shadow-lg py-1 min-w-45"
                           style={{
                             borderColor: BORDER,
                             boxShadow: '0 8px 24px rgba(11,31,58,0.12)',
@@ -1031,7 +1031,7 @@ export function UsersPage() {
                   <Input
                     {...inviteForm.register('phone')}
                     type="tel"
-                    placeholder="+91 91138 73811"
+                    placeholder="+91 99720 58881"
                     error={inviteForm.formState.errors.phone?.message}
                   />
                 </Field>

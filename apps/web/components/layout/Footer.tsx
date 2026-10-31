@@ -8,6 +8,8 @@ import {
   XIcon,
   YouTubeIcon,
 } from '../ui/SocialIcons';
+import { Phone, Mail, MessageCircle, MapPin } from 'lucide-react';
+import type { ContactIconName } from '@/lib/constants';
 
 // ─────────────────────────────────────────
 // TYPES
@@ -16,6 +18,13 @@ type SocialItem = {
   label: string;
   href: string;
   icon: React.ReactNode;
+};
+
+const CONTACT_ICONS: Record<ContactIconName, React.ReactNode> = {
+  phone: <Phone size={16} strokeWidth={1.75} />,
+  mail: <Mail size={16} strokeWidth={1.75} />,
+  chat: <MessageCircle size={16} strokeWidth={1.75} />,
+  map: <MapPin size={16} strokeWidth={1.75} />,
 };
 
 // ─────────────────────────────────────────
@@ -112,7 +121,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy text-white">
       {/* ── Top grid ── */}
-      <div className="max-w-[1280px] mx-auto px-6 md:px-10 xl:px-14 pt-16 pb-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 xl:px-14 pt-16 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_1.2fr] gap-12 pb-6 border-b border-white/10">
           {/* Brand column */}
           <div>
@@ -151,23 +160,37 @@ export default function Footer() {
               Get in Touch
             </h4>
             <ul className="flex flex-col gap-4">
-              {FOOTER_CONTACT.map((item) => (
-                <li key={item.label}>
-                  <Link
-                    href={item.href}
-                    target={item.href.startsWith('http') ? '_blank' : undefined}
-                    rel={
-                      item.href.startsWith('http')
-                        ? 'noopener noreferrer'
-                        : undefined
-                    }
-                    className="group flex items-start gap-2.5 text-[14px] text-white/60 hover:text-white transition-colors duration-200"
-                  >
-                    <span className="mt-px shrink-0">{item.icon}</span>
-                    <span className="leading-snug">{item.value}</span>
-                  </Link>
-                </li>
-              ))}
+              {FOOTER_CONTACT.map((item) => {
+                const lines = item.lines ?? [
+                  { value: item.value, href: item.href },
+                ];
+                return (
+                  <li key={item.label} className="flex items-start gap-2.5">
+                    <span className="mt-0.5 shrink-0 text-sky-brand">
+                      {CONTACT_ICONS[item.icon]}
+                    </span>
+                    <div className="flex flex-col gap-1.5">
+                      {lines.map((line) => (
+                        <Link
+                          key={line.href}
+                          href={line.href}
+                          target={
+                            line.href.startsWith('http') ? '_blank' : undefined
+                          }
+                          rel={
+                            line.href.startsWith('http')
+                              ? 'noopener noreferrer'
+                              : undefined
+                          }
+                          className="text-[14px] leading-snug text-white/60 hover:text-white transition-colors duration-200"
+                        >
+                          {line.value}
+                        </Link>
+                      ))}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
 
             {/* Socials */}
@@ -182,7 +205,7 @@ export default function Footer() {
         {/* ── Bottom bar ── */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-8">
           <p className="text-[13px] text-white/30 text-center sm:text-left">
-            &copy; {new Date().getFullYear()}{" "} Yaana Transit &#9642; All rights
+            &copy; {new Date().getFullYear()} Yaana Transit &#9642; All rights
             reserved.
           </p>
           <p className="text-[13px] text-white/30">

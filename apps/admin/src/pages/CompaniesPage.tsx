@@ -337,7 +337,7 @@ function CompanyFormFields({
           <Field label="Phone" error={errors.phone?.message}>
             <Input
               {...register('phone')}
-              placeholder="+91 91138 73811"
+              placeholder="+91 99720 58881"
               error={errors.phone?.message}
             />
           </Field>
@@ -634,7 +634,7 @@ export function CompaniesPage() {
         className="bg-white rounded-xl border p-3 flex items-center gap-3 flex-wrap"
         style={{ borderColor: BORDER }}
       >
-        <div className="relative flex-1 min-w-[200px]">
+        <div className="relative flex-1 min-w-50">
           <Search
             size={15}
             className="absolute left-3 top-1/2 -translate-y-1/2"
@@ -749,7 +749,7 @@ export function CompaniesPage() {
                         </div>
                         <div className="min-w-0">
                           <p
-                            className="font-semibold text-xs leading-tight truncate max-w-[160px]"
+                            className="font-semibold text-xs leading-tight truncate max-w-40"
                             style={{
                               color: NAVY,
                               fontFamily: 'Poppins, sans-serif',
@@ -758,7 +758,7 @@ export function CompaniesPage() {
                             {company.name}
                           </p>
                           <p
-                            className="text-xs truncate max-w-[160px]"
+                            className="text-xs truncate max-w-40"
                             style={{ color: MUTED }}
                           >
                             {company.email ?? '—'}
@@ -834,7 +834,7 @@ export function CompaniesPage() {
                       </button>
                       {menuOpen === company.id && (
                         <div
-                          className="absolute right-0 top-10 z-30 bg-white rounded-xl border shadow-lg py-1 min-w-[160px]"
+                          className="absolute right-0 top-10 z-30 bg-white rounded-xl border shadow-lg py-1 min-w-40"
                           style={{
                             borderColor: BORDER,
                             boxShadow: '0 8px 24px rgba(11,31,58,0.12)',

@@ -162,7 +162,7 @@ export default function EnquiryForm() {
                 >
                   WhatsApp opened!
                 </p>
-                <p className="text-[13px] text-slate-500 max-w-[260px]">
+                <p className="text-[13px] text-slate-500 max-w-65">
                   Your enquiry details are pre-filled. Just hit send and our
                   team will reply within 15 minutes.
                 </p>
@@ -214,7 +214,7 @@ export default function EnquiryForm() {
                   <input
                     type="tel"
                     required
-                    placeholder="+91 91138 73811"
+                    placeholder="+91 99720 58881"
                     value={form.phone}
                     onChange={set('phone')}
                     className={inputCls}
