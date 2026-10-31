@@ -12,8 +12,8 @@
 //  • Example: 919876543210  →  +91 98765 43210
 // Everything else (display text, tel: links, WhatsApp links) is generated automatically.
 // ═════════════════════════════════════════
-const PRIMARY_PHONE = '919972058881'; // ← main number (Karthik G)
-const SECONDARY_PHONE = '919972058882'; // ← 2nd number (Charan V)
+const PRIMARY_PHONE = '919972058882'; // ← main number (Karthik G)
+const SECONDARY_PHONE = '919972058881'; // ← 2nd number (Charan V)
 
 // Which number receives WhatsApp messages?
 const WHATSAPP_PHONE = PRIMARY_PHONE; // change to SECONDARY_PHONE if needed
